@@ -3,6 +3,9 @@
 ## Overview
 This repo contains a WASM32 compiled static library containing Google's [Tint](https://dawn.googlesource.com/tint) compiler for WGSL.
 
+### Features
+**This library has only been compiled to support the *Tint SPIRV reader and writer*, as well as the *WGSL reader and writer*.**
+
 ## Installation
 The include directory is provided as `tint` and can be added to any project or `usr/local/include/`.
 
@@ -11,9 +14,6 @@ sudo cp tint/ /usr/local/include/
 ```
 
 To link the library with a WASM project, ensure that you link using the `-L<path/to/directory> -ltint` flags with `emcc` or `clang`
-
-## Features
-This library has only been compiled to support the Tint SPIRV reader and writer, as well as the WGSL reader and writer.
 
 ## Compilation Steps
 The following commands were used to generate the .o files used to compile the archive:
