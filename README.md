@@ -9,7 +9,7 @@ This repo contains a WASM32 compiled static library containing Google's [Tint](h
 ## Installation
 The include directory is provided as `tint` and can be added to any project or `usr/local/include/`.
 
-```
+```bash
 sudo cp tint/ /usr/local/include/
 ```
 
@@ -17,7 +17,7 @@ To link the library with a WASM project, ensure that you link using the `-L<path
 
 ## Compilation Steps
 The following commands were used to generate the .o files used to compile the archive:
-```
+```bash
 git clone https://dawn.googlesource.com/tint
 cd tint
 cp standalone.gclient .gclient
@@ -32,7 +32,7 @@ If you try to reproduce these steps and you see that the compilation process fai
 
 The following bash script was used to compile the static library:
 
-```wasm_build.sh
+```bash
 #! /usr/bin/bash
 
 # Create a temporary directory for uniquely named object files
