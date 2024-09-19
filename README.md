@@ -16,15 +16,23 @@ To link the library with a WASM project, ensure that you link using the `-L<path
 This library has only been compiled to support the Tint SPIRV reader and writer, as well as the WGSL reader and writer.
 
 ## Compilation Steps
-The following command was used to generate the .o files used to compile the archive:
+The following commands were used to generate the .o files used to compile the archive:
 ```
+git clone https://dawn.googlesource.com/tint
+cd tint
+cp standalone.gclient .gclient
+gclient sync
+mkdir -p out/emsc_release/
+cd out/emsc_release/
 emcmake cmake ../.. -GNinja -DTINT_BUILD_SPV_READER=ON -DTINT_BUILD_CMD_TOOLS=ON -DTINT_BUILD_HLSL_READER=OFF -DTINT_BUILD_GLSL_READER=OFF -DTINT_BUILD_MSL_WRITER=OFF -DTINT_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release
+autoninja
 ```
 
-If you try to reproduce these steps to include the readers for other shader languages
+If you try to reproduce these steps and you see that the compilation process fails on protobuf with very few files left to compile, **do not worry**. This is expected since we aren't using `protobuf` to build the static libraries and the `protobuf` that was compiled won't work since we're using `emcc`. All of the object files needed to build Tint for web exist so we can use a bash script to collect all the object files and create an archive using `emar rcs`.
 
 The following bash script was used to compile the static library:
-```
+
+```wasm_build.sh
 #! /usr/bin/bash
 
 # Create a temporary directory for uniquely named object files
