@@ -49,7 +49,8 @@
 <body>
     <h1>WASM + Tint: SPIR-V and WGSL Shader Cross-Compilation Demo</h1>
     <p>Select a (.spv), (.spvasm), or (.wgsl) shader file from your system:</p>
-    <p>This could be generalized for every Tint backend, but I worry about the static library size needed for Tint before we create the WASM module.</p>
+    <p>This could be generalized for every Tint backend, but I worry about the static library size needed for Tint
+        before we create the WASM module.</p>
     <input type="file" id="fileInput" accept=".spv">
     <div id="fileInfo"></div>
     <p id="compile">Compile to Target:</p>
@@ -231,7 +232,7 @@
             }
         }
 
-        // Input function is optional for special cases like SPV which is not a readable string
+        // Input function is optional for special cases (if you want legible SPIR-V ASM in place of the SPIR-V Binary garbage)
         // Output function is always required: it should be Module._SHADERTYPE_TO_SHADERTYPE
         function crossCompile(inputFunc, outputFunc) {
 

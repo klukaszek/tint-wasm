@@ -26,6 +26,8 @@ make
 ```
 This will produce a `build/` directory that contains a simple WASM app to cross compile shaders from your browser, as well as the module that you can use with your own projects.
 
+Take a look at shell.html to get a better understanding of how the API is used in Javascript. It is definitely more complex than most will ever need, but the underlying ideas of pointer management remain the same.
+
 ## Working With Just The Library
 All necessary include files are provided in the root directory's subdirectories, and can be added to any project or `usr/local/include/tint/`.
 
