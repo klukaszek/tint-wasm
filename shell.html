@@ -49,7 +49,7 @@
 <body>
     <h1>WASM + Tint: SPIR-V and WGSL Shader Cross-Compilation Demo</h1>
     <p>Select a (.spv), (.spvasm), or (.wgsl) shader file from your system:</p>
-    <p>This could be generalized for every Tint backend, but I worry about the static library size needed for Tint in its entirety to work on WASM.</p>
+    <p>This could be generalized for every Tint backend, but I worry about the static library size needed for Tint before we create the WASM module.</p>
     <input type="file" id="fileInput" accept=".spv">
     <div id="fileInfo"></div>
     <p id="compile">Compile to Target:</p>
