@@ -1,21 +1,51 @@
-# tint-wgpu
+# tint-wasm
 
 ## Overview
-This repo contains a WASM32 compiled static library containing Google's [Tint](https://dawn.googlesource.com/tint) compiler for WGSL.
+This repo contains a WASM32 compiled static library containing Google's [Tint](https://dawn.googlesource.com/tint) compiler for WGSL. It also contains a fully functional build of [SPIRV-Tools](https://github.com/KhronosGroup/SPIRV-Tools) since Tint depends on it!
+
+I mostly worked on putting this together to assist in the development of WebGPU applications using SPIRV shaders regardless of the browser being used.
+
+Also provided in this repo is `tint_wasm.cpp` a file that outlines a very simple API for cross compiling SPIR-V and WGSL using JavaScript + WASM.
 
 ### Features
 **This library has only been compiled to support the *Tint SPIRV reader and writer*, as well as the *WGSL reader and writer*.**
 
-## Installation
-The include directory is provided as `tint` and can be added to any project or `usr/local/include/`.
+## WASM Module
+If you would like to simply convert SPIRV to WGSL using a few WASM calls in JS, I recommend using the `tint_wasm.cpp` API.
+
+### Building the WASM Module:
+#### Requirements
+- [Emscripten](https://emscripten.org/docs/getting_started/downloads.html)
+- make
+
+#### Build
+Compiling the WASM module is easy:
+```bash
+cd tint-wasm
+make
+```
+This will produce a `build/` directory that contains a simple WASM app to cross compile shaders from your browser, as well as the module that you can use with your own projects.
+
+## Working With Just The Library
+All necessary include files are provided in the root directory's subdirectories, and can be added to any project or `usr/local/include/tint/`.
 
 ```bash
-sudo cp tint/ /usr/local/include/
+## Make a tint directory in your target directory
+sudo mkdir {target}/tint/
+
+## Copy header files to a tint/ directory in your target directory
+sudo cp -rp {api/,cmd/,lang/,spirv-tools/,utils/} {target}/tint/
+
+## Make sure that you know where your static library is for linking purposes.
+sudo cp libtint.a {target}/{location}/
 ```
 
+### Linking
 To link the library with a WASM project, ensure that you link using the `-L<path/to/directory> -ltint` flags with `emcc` or `clang`
 
-## Compilation Steps
+## Compiling Tint From Source Using Emscripten 
+
+### Step 1:
 The following commands were used to generate the .o files used to compile the archive:
 ```bash
 git clone https://dawn.googlesource.com/tint
@@ -28,8 +58,10 @@ emcmake cmake ../.. -GNinja -DTINT_BUILD_SPV_READER=ON -DTINT_BUILD_CMD_TOOLS=ON
 autoninja
 ```
 
+#### Issues:
 If you try to reproduce these steps and you see that the compilation process fails on protobuf with very few files left to compile, **do not worry**. This is expected since we aren't using `protobuf` to build the static libraries and the `protobuf` that was compiled won't work since we're using `emcc`. All of the object files needed to build Tint for web exist so we can use a bash script to collect all the object files and create an archive using `emar rcs`.
 
+### Step 2:
 The following bash script was used to compile the static library:
 
 ```bash
