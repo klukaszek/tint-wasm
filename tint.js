@@ -28,7 +28,7 @@ var readyPromise = new Promise((resolve, reject) => {
   readyPromiseResolve = resolve;
   readyPromiseReject = reject;
 });
-["_SPV_TO_SPVASM","_SPV_TO_WGSL","_malloc","_free","getExceptionMessage","incrementExceptionRefcount","decrementExceptionRefcount","_memory","___indirect_function_table","onRuntimeInitialized"].forEach((prop) => {
+["_SPV_TO_SPVASM","_SPV_TO_WGSL","_WGSL_TO_SPV","_WGSL_TO_SPVASM","_SPVASM_TO_WGSL","_GetSPIRVSize","_SPVASM_TO_SPV","_malloc","_free","getExceptionMessage","incrementExceptionRefcount","decrementExceptionRefcount","_memory","___indirect_function_table","onRuntimeInitialized"].forEach((prop) => {
   if (!Object.getOwnPropertyDescriptor(readyPromise, prop)) {
     Object.defineProperty(readyPromise, prop, {
       get: () => abort('You are getting ' + prop + ' on the Promise object, instead of the instance. Use .then() to get called back with the instance, see the MODULARIZE docs in src/settings.js'),
@@ -4693,6 +4693,8 @@ function dbg(...args) {
     };
 
 
+
+
   var incrementExceptionRefcount = (ptr) => ___cxa_increment_exception_refcount(ptr);
   Module['incrementExceptionRefcount'] = incrementExceptionRefcount;
 
@@ -4839,6 +4841,8 @@ var wasmImports = {
   /** @export */
   invoke_vii,
   /** @export */
+  invoke_viid,
+  /** @export */
   invoke_viii,
   /** @export */
   invoke_viiii,
@@ -4855,7 +4859,12 @@ var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors', 0);
 var _SPV_TO_SPVASM = Module['_SPV_TO_SPVASM'] = createExportWrapper('SPV_TO_SPVASM', 2);
 var ___cxa_free_exception = createExportWrapper('__cxa_free_exception', 1);
+var _SPVASM_TO_SPV = Module['_SPVASM_TO_SPV'] = createExportWrapper('SPVASM_TO_SPV', 2);
 var _SPV_TO_WGSL = Module['_SPV_TO_WGSL'] = createExportWrapper('SPV_TO_WGSL', 2);
+var _SPVASM_TO_WGSL = Module['_SPVASM_TO_WGSL'] = createExportWrapper('SPVASM_TO_WGSL', 2);
+var _WGSL_TO_SPV = Module['_WGSL_TO_SPV'] = createExportWrapper('WGSL_TO_SPV', 2);
+var _WGSL_TO_SPVASM = Module['_WGSL_TO_SPVASM'] = createExportWrapper('WGSL_TO_SPVASM', 2);
+var _GetSPIRVSize = Module['_GetSPIRVSize'] = createExportWrapper('GetSPIRVSize', 0);
 var _free = Module['_free'] = createExportWrapper('free', 1);
 var _malloc = Module['_malloc'] = createExportWrapper('malloc', 1);
 var _main = createExportWrapper('__main_argc_argv', 2);
@@ -4896,10 +4905,10 @@ function invoke_iiii(index,a1,a2,a3) {
   }
 }
 
-function invoke_viii(index,a1,a2,a3) {
+function invoke_iii(index,a1,a2) {
   var sp = stackSave();
   try {
-    getWasmTableEntry(index)(a1,a2,a3);
+    return getWasmTableEntry(index)(a1,a2);
   } catch(e) {
     stackRestore(sp);
     if (!(e instanceof EmscriptenEH)) throw e;
@@ -4907,10 +4916,10 @@ function invoke_viii(index,a1,a2,a3) {
   }
 }
 
-function invoke_iii(index,a1,a2) {
+function invoke_viii(index,a1,a2,a3) {
   var sp = stackSave();
   try {
-    return getWasmTableEntry(index)(a1,a2);
+    getWasmTableEntry(index)(a1,a2,a3);
   } catch(e) {
     stackRestore(sp);
     if (!(e instanceof EmscriptenEH)) throw e;
@@ -4933,6 +4942,17 @@ function invoke_vii(index,a1,a2) {
   var sp = stackSave();
   try {
     getWasmTableEntry(index)(a1,a2);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiii(index,a1,a2,a3,a4,a5) {
+  var sp = stackSave();
+  try {
+    return getWasmTableEntry(index)(a1,a2,a3,a4,a5);
   } catch(e) {
     stackRestore(sp);
     if (!(e instanceof EmscriptenEH)) throw e;
@@ -4988,17 +5008,6 @@ function invoke_v(index) {
   var sp = stackSave();
   try {
     getWasmTableEntry(index)();
-  } catch(e) {
-    stackRestore(sp);
-    if (!(e instanceof EmscriptenEH)) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_iiiiii(index,a1,a2,a3,a4,a5) {
-  var sp = stackSave();
-  try {
-    return getWasmTableEntry(index)(a1,a2,a3,a4,a5);
   } catch(e) {
     stackRestore(sp);
     if (!(e instanceof EmscriptenEH)) throw e;
@@ -5127,6 +5136,17 @@ function invoke_viiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a1
   }
 }
 
+function invoke_viid(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    getWasmTableEntry(index)(a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
 function invoke_iiiiij(index,a1,a2,a3,a4,a5,a6) {
   var sp = stackSave();
   try {
@@ -5154,6 +5174,8 @@ function invoke_jiiii(index,a1,a2,a3,a4) {
 // === Auto-generated postamble setup entry stuff ===
 
 Module['UTF8ToString'] = UTF8ToString;
+Module['stringToUTF8'] = stringToUTF8;
+Module['lengthBytesUTF8'] = lengthBytesUTF8;
 var missingLibrarySymbols = [
   'writeI53ToI64',
   'writeI53ToI64Clamped',
@@ -5374,8 +5396,6 @@ var unexportedSymbols = [
   'UTF8Decoder',
   'UTF8ArrayToString',
   'stringToUTF8Array',
-  'stringToUTF8',
-  'lengthBytesUTF8',
   'intArrayFromString',
   'stringToAscii',
   'UTF16Decoder',
