@@ -32,7 +32,7 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/pipeline_stage.h"
+#include "lang/wgsl/ast/pipeline_stage.h"
 
 namespace tint::glsl::writer {
 

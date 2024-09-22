@@ -32,9 +32,9 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/node.h"
-#include "src/tint/lang/wgsl/features/language_feature.h"
-#include "src/tint/utils/containers/unique_vector.h"
+#include "lang/wgsl/ast/node.h"
+#include "lang/wgsl/features/language_feature.h"
+#include "utils/containers/unique_vector.h"
 
 namespace tint::ast {
 

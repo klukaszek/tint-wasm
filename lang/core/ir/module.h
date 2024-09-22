@@ -31,21 +31,21 @@
 #include <memory>
 #include <string>
 
-#include "src/tint/lang/core/constant/manager.h"
-#include "src/tint/lang/core/ir/block.h"
-#include "src/tint/lang/core/ir/constant.h"
-#include "src/tint/lang/core/ir/function.h"
-#include "src/tint/lang/core/ir/instruction.h"
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/lang/core/type/manager.h"
-#include "src/tint/utils/containers/const_propagating_ptr.h"
-#include "src/tint/utils/containers/filtered_iterator.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/diagnostic/source.h"
-#include "src/tint/utils/id/generation_id.h"
-#include "src/tint/utils/memory/block_allocator.h"
-#include "src/tint/utils/result/result.h"
-#include "src/tint/utils/symbol/symbol_table.h"
+#include "lang/core/constant/manager.h"
+#include "lang/core/ir/block.h"
+#include "lang/core/ir/constant.h"
+#include "lang/core/ir/function.h"
+#include "lang/core/ir/instruction.h"
+#include "lang/core/ir/value.h"
+#include "lang/core/type/manager.h"
+#include "utils/containers/const_propagating_ptr.h"
+#include "utils/containers/filtered_iterator.h"
+#include "utils/containers/vector.h"
+#include "utils/diagnostic/source.h"
+#include "utils/id/generation_id.h"
+#include "utils/memory/block_allocator.h"
+#include "utils/result/result.h"
+#include "utils/symbol/symbol_table.h"
 
 namespace tint::core::ir {
 

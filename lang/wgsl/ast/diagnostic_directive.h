@@ -32,8 +32,8 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/diagnostic_control.h"
-#include "src/tint/lang/wgsl/ast/node.h"
+#include "lang/wgsl/ast/diagnostic_control.h"
+#include "lang/wgsl/ast/node.h"
 
 namespace tint::ast {
 

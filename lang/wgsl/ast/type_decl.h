@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TYPE_DECL_H_
 #define SRC_TINT_LANG_WGSL_AST_TYPE_DECL_H_
 
-#include "src/tint/lang/wgsl/ast/node.h"
+#include "lang/wgsl/ast/node.h"
 
 // Forward declarations
 namespace tint::ast {

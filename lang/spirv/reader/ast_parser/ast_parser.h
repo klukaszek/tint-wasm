@@ -35,9 +35,9 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/text/string_stream.h"
+#include "utils/containers/hashmap.h"
+#include "utils/macros/compiler.h"
+#include "utils/text/string_stream.h"
 
 TINT_BEGIN_DISABLE_WARNING(NEWLINE_EOF);
 TINT_BEGIN_DISABLE_WARNING(OLD_STYLE_CAST);
@@ -49,13 +49,13 @@ TINT_END_DISABLE_WARNING(SIGN_CONVERSION);
 TINT_END_DISABLE_WARNING(OLD_STYLE_CAST);
 TINT_END_DISABLE_WARNING(NEWLINE_EOF);
 
-#include "src/tint/lang/spirv/reader/ast_parser/attributes.h"
-#include "src/tint/lang/spirv/reader/ast_parser/entry_point_info.h"
-#include "src/tint/lang/spirv/reader/ast_parser/enum_converter.h"
-#include "src/tint/lang/spirv/reader/ast_parser/namer.h"
-#include "src/tint/lang/spirv/reader/ast_parser/type.h"
-#include "src/tint/lang/spirv/reader/ast_parser/usage.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
+#include "lang/spirv/reader/ast_parser/attributes.h"
+#include "lang/spirv/reader/ast_parser/entry_point_info.h"
+#include "lang/spirv/reader/ast_parser/enum_converter.h"
+#include "lang/spirv/reader/ast_parser/namer.h"
+#include "lang/spirv/reader/ast_parser/type.h"
+#include "lang/spirv/reader/ast_parser/usage.h"
+#include "lang/wgsl/program/program_builder.h"
 
 /// This is the implementation of the SPIR-V parser for Tint.
 

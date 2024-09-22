@@ -30,8 +30,8 @@
 
 #include <vector>
 
-#include "src/tint/api/common/binding_point.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "api/common/binding_point.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 // Forward declarations
 namespace tint {

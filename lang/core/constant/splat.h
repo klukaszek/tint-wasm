@@ -28,10 +28,10 @@
 #ifndef SRC_TINT_LANG_CORE_CONSTANT_SPLAT_H_
 #define SRC_TINT_LANG_CORE_CONSTANT_SPLAT_H_
 
-#include "src/tint/lang/core/constant/composite.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/constant/composite.h"
+#include "lang/core/type/type.h"
+#include "utils/containers/vector.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::constant {
 

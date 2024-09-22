@@ -30,11 +30,11 @@
 
 #include <vector>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/texel_format.h"
-#include "src/tint/lang/core/type/storage_texture.h"
-#include "src/tint/lang/core/type/texture_dimension.h"
-#include "src/tint/lang/wgsl/ast/builder.h"
+#include "lang/core/access.h"
+#include "lang/core/texel_format.h"
+#include "lang/core/type/storage_texture.h"
+#include "lang/core/type/texture_dimension.h"
+#include "lang/wgsl/ast/builder.h"
 
 namespace tint::ast::test {
 

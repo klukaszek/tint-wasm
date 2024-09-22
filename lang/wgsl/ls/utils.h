@@ -29,11 +29,11 @@
 #define SRC_TINT_LANG_WGSL_LS_UTILS_H_
 
 #include "langsvr/lsp/lsp.h"
-#include "src/tint/lang/wgsl/sem/value_expression.h"
-#include "src/tint/utils/diagnostic/source.h"
-#include "src/tint/utils/rtti/castable.h"
-#include "src/tint/utils/text/styled_text.h"
-#include "src/tint/utils/text/text_style.h"
+#include "lang/wgsl/sem/value_expression.h"
+#include "utils/diagnostic/source.h"
+#include "utils/rtti/castable.h"
+#include "utils/text/styled_text.h"
+#include "utils/text/text_style.h"
 
 // Forward declarations
 namespace tint::sem {

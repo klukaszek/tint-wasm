@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/scalar.h"
+#include "lang/core/type/scalar.h"
 
 // X11 likes to #define Bool leading to confusing error messages.
 // If its defined, undefine it.

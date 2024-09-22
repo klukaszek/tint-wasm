@@ -33,8 +33,8 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/containers/vector.h"
+#include "utils/traits/traits.h"
 
 namespace tint {
 //! @cond Doxygen_Suppress

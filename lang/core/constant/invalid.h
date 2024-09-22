@@ -29,10 +29,10 @@
 #define SRC_TINT_LANG_CORE_CONSTANT_INVALID_H_
 
 #include <variant>
-#include "src/tint/lang/core/constant/value.h"
-#include "src/tint/lang/core/number.h"
-#include "src/tint/lang/core/type/invalid.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/constant/value.h"
+#include "lang/core/number.h"
+#include "lang/core/type/invalid.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::constant {
 

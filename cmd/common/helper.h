@@ -33,11 +33,11 @@
 #include <string>
 #include <vector>
 
-#include "src/tint/lang/wgsl/inspector/inspector.h"
-#include "src/tint/utils/diagnostic/source.h"
+#include "lang/wgsl/inspector/inspector.h"
+#include "utils/diagnostic/source.h"
 
 #if TINT_BUILD_SPV_READER
-#include "src/tint/lang/spirv/reader/common/options.h"
+#include "lang/spirv/reader/common/options.h"
 #endif
 
 // Forward declarations

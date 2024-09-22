@@ -32,9 +32,9 @@
 #include <utility>
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
-#include "src/tint/lang/wgsl/resolver/resolve.h"
-#include "src/tint/lang/wgsl/writer/ast_printer/ast_printer.h"
+#include "lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/resolver/resolve.h"
+#include "lang/wgsl/writer/ast_printer/ast_printer.h"
 
 namespace tint::wgsl::writer {
 

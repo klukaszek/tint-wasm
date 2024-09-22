@@ -31,8 +31,8 @@
 #include <cstdint>
 #include <vector>
 
-#include "src/tint/lang/spirv/writer/common/module.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/spirv/writer/common/module.h"
+#include "utils/result/result.h"
 
 // Forward declarations
 namespace tint::core::ir {

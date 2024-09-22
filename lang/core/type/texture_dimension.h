@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_CORE_TYPE_TEXTURE_DIMENSION_H_
 #define SRC_TINT_LANG_CORE_TYPE_TEXTURE_DIMENSION_H_
 
-#include "src/tint/utils/text/string_stream.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/text/string_stream.h"
+#include "utils/traits/traits.h"
 
 namespace tint::core::type {
 

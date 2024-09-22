@@ -31,7 +31,7 @@
 #include <vector>
 
 #include "spirv/unified1/spirv.hpp11"
-#include "src/tint/lang/spirv/writer/common/operand.h"
+#include "lang/spirv/writer/common/operand.h"
 
 namespace tint::spirv::writer {
 

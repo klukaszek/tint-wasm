@@ -34,10 +34,10 @@
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/core/ir/builder.h"
-#include "src/tint/lang/core/ir/disassembly.h"
-#include "src/tint/lang/core/ir/validator.h"
-#include "src/tint/utils/containers/enum_set.h"
+#include "lang/core/ir/builder.h"
+#include "lang/core/ir/disassembly.h"
+#include "lang/core/ir/validator.h"
+#include "utils/containers/enum_set.h"
 
 namespace tint::core::ir::transform {
 

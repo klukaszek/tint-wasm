@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_LET_H_
 #define SRC_TINT_LANG_WGSL_AST_LET_H_
 
-#include "src/tint/lang/wgsl/ast/variable.h"
+#include "lang/wgsl/ast/variable.h"
 
 namespace tint::ast {
 

@@ -33,13 +33,13 @@
 #include <unordered_map>
 #include <vector>
 
-#include "src/tint/api/common/binding_point.h"
-#include "src/tint/api/options/binding_remapper.h"
-#include "src/tint/api/options/external_texture.h"
-#include "src/tint/api/options/pixel_local.h"
-#include "src/tint/lang/core/access.h"
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "api/common/binding_point.h"
+#include "api/options/binding_remapper.h"
+#include "api/options/external_texture.h"
+#include "api/options/pixel_local.h"
+#include "lang/core/access.h"
+#include "utils/math/hash.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::hlsl::writer {
 

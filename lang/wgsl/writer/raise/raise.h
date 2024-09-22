@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_WRITER_RAISE_RAISE_H_
 #define SRC_TINT_LANG_WGSL_WRITER_RAISE_RAISE_H_
 
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/utils/diagnostic/diagnostic.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/core/ir/module.h"
+#include "utils/diagnostic/diagnostic.h"
+#include "utils/result/result.h"
 
 namespace tint::wgsl::writer {
 

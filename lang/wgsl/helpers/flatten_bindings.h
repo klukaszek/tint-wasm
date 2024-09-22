@@ -29,7 +29,7 @@
 #define SRC_TINT_LANG_WGSL_HELPERS_FLATTEN_BINDINGS_H_
 
 #include <optional>
-#include "src/tint/lang/wgsl/program/program.h"
+#include "lang/wgsl/program/program.h"
 
 namespace tint::wgsl {
 

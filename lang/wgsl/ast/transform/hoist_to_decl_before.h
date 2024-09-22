@@ -31,8 +31,8 @@
 #include <functional>
 #include <memory>
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/lang/wgsl/sem/value_expression.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/sem/value_expression.h"
 
 namespace tint::ast::transform {
 

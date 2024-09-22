@@ -32,10 +32,10 @@
 #include <optional>
 #include <utility>
 
-#include "src/tint/utils/containers/hashmap_base.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/ice/ice.h"
-#include "src/tint/utils/math/hash.h"
+#include "utils/containers/hashmap_base.h"
+#include "utils/containers/vector.h"
+#include "utils/ice/ice.h"
+#include "utils/math/hash.h"
 
 namespace tint {
 

@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_MSL_WRITER_AST_RAISE_MODULE_SCOPE_VAR_TO_ENTRY_POINT_PARAM_H_
 #define SRC_TINT_LANG_MSL_WRITER_AST_RAISE_MODULE_SCOPE_VAR_TO_ENTRY_POINT_PARAM_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::msl::writer {
 

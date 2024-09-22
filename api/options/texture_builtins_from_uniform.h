@@ -30,8 +30,8 @@
 
 #include <vector>
 
-#include "src/tint/api/common/binding_point.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "api/common/binding_point.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint {
 

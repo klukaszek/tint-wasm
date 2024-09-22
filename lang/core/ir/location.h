@@ -30,7 +30,7 @@
 
 #include <optional>
 
-#include "src/tint/lang/core/interpolation.h"
+#include "lang/core/interpolation.h"
 
 namespace tint::core::ir {
 

@@ -28,10 +28,10 @@
 #ifndef SRC_TINT_LANG_CORE_IR_CLONE_CONTEXT_H_
 #define SRC_TINT_LANG_CORE_IR_CLONE_CONTEXT_H_
 
-#include "src/tint/utils/containers/const_propagating_ptr.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/containers/transform.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/containers/const_propagating_ptr.h"
+#include "utils/containers/hashmap.h"
+#include "utils/containers/transform.h"
+#include "utils/traits/traits.h"
 
 namespace tint::core::ir {
 class Block;

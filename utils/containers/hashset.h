@@ -35,8 +35,8 @@
 #include <tuple>
 #include <utility>
 
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/containers/vector.h"
+#include "utils/containers/hashmap.h"
+#include "utils/containers/vector.h"
 
 namespace tint {
 

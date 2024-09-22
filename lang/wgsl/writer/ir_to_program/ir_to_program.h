@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_WRITER_IR_TO_PROGRAM_IR_TO_PROGRAM_H_
 #define SRC_TINT_LANG_WGSL_WRITER_IR_TO_PROGRAM_IR_TO_PROGRAM_H_
 
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/lang/wgsl/writer/ir_to_program/program_options.h"
+#include "lang/wgsl/program/program.h"
+#include "lang/wgsl/writer/ir_to_program/program_options.h"
 
 namespace tint::core::ir {
 class Module;

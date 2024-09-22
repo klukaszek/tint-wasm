@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TRANSFORM_CLAMP_FRAG_DEPTH_H_
 #define SRC_TINT_LANG_WGSL_AST_TRANSFORM_CLAMP_FRAG_DEPTH_H_
 
-#include "src/tint/api/options/depth_range_offsets.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "api/options/depth_range_offsets.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::ast::transform {
 

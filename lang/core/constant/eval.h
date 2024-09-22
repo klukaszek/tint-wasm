@@ -32,10 +32,10 @@
 #include <algorithm>
 #include <string>
 
-#include "src/tint/lang/core/number.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/core/number.h"
+#include "lang/core/type/type.h"
+#include "utils/containers/vector.h"
+#include "utils/result/result.h"
 
 // Forward declarations
 namespace tint {

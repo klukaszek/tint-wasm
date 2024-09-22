@@ -31,10 +31,10 @@
 #include <string>
 #include <variant>
 
-#include "src/tint/utils/containers/slice.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/text/string_stream.h"
-#include "src/tint/utils/text/text_style.h"
+#include "utils/containers/slice.h"
+#include "utils/containers/vector.h"
+#include "utils/text/string_stream.h"
+#include "utils/text/text_style.h"
 
 /// Forward declaration
 namespace tint {

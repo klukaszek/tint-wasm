@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/numeric_scalar.h"
+#include "lang/core/type/numeric_scalar.h"
 
 namespace tint::core::type {
 

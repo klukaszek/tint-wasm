@@ -30,8 +30,8 @@
 
 #include <vector>
 
-#include "src/tint/lang/spirv/reader/common/options.h"
-#include "src/tint/lang/wgsl/program/program.h"
+#include "lang/spirv/reader/common/options.h"
+#include "lang/wgsl/program/program.h"
 
 // Forward declarations
 namespace tint::core::ir {

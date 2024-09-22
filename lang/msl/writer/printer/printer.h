@@ -32,7 +32,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "src/tint/utils/result/result.h"
+#include "utils/result/result.h"
 
 // Forward declarations
 namespace tint::core::ir {

@@ -32,7 +32,7 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/extension.h"
+#include "lang/wgsl/ast/extension.h"
 
 namespace tint::ast {
 

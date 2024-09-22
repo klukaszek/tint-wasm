@@ -30,11 +30,11 @@
 
 #include <unordered_map>
 
-#include "src/tint/api/common/binding_point.h"
-#include "src/tint/api/options/external_texture.h"
-#include "src/tint/lang/spirv/writer/common/options.h"
-#include "src/tint/utils/diagnostic/diagnostic.h"
-#include "src/tint/utils/result/result.h"
+#include "api/common/binding_point.h"
+#include "api/options/external_texture.h"
+#include "lang/spirv/writer/common/options.h"
+#include "utils/diagnostic/diagnostic.h"
+#include "utils/result/result.h"
 
 namespace tint::spirv::writer {
 

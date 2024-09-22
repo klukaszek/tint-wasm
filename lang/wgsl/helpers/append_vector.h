@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_HELPERS_APPEND_VECTOR_H_
 #define SRC_TINT_LANG_WGSL_HELPERS_APPEND_VECTOR_H_
 
-#include "src/tint/lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/program/program_builder.h"
 
 // Forward declarations
 namespace tint::ast {

@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_UTILS_MACROS_STATIC_INIT_H_
 #define SRC_TINT_UTILS_MACROS_STATIC_INIT_H_
 
-#include "src/tint/utils/macros/concat.h"
+#include "utils/macros/concat.h"
 
 /// A helper macro that executes STATEMENT the first time the macro comes into scope - typically
 /// used at global scope to call a function before main() is run.

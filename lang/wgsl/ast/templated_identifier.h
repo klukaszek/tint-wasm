@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TEMPLATED_IDENTIFIER_H_
 #define SRC_TINT_LANG_WGSL_AST_TEMPLATED_IDENTIFIER_H_
 
-#include "src/tint/lang/wgsl/ast/identifier.h"
-#include "src/tint/utils/containers/vector.h"
+#include "lang/wgsl/ast/identifier.h"
+#include "utils/containers/vector.h"
 
 // Forward declarations
 namespace tint::ast {

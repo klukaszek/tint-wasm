@@ -33,11 +33,11 @@
 #include <type_traits>
 #include <utility>
 
-#include "src/tint/utils/macros/concat.h"
-#include "src/tint/utils/macros/foreach.h"
-#include "src/tint/utils/math/math.h"
-#include "src/tint/utils/memory/aligned_storage.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/macros/concat.h"
+#include "utils/macros/foreach.h"
+#include "utils/math/math.h"
+#include "utils/memory/aligned_storage.h"
+#include "utils/result/result.h"
 
 /// Forward declarations
 namespace tint {

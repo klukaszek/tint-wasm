@@ -33,12 +33,12 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/diagnostic_control.h"
-#include "src/tint/lang/wgsl/ast/variable.h"
-#include "src/tint/lang/wgsl/sem/call.h"
-#include "src/tint/utils/containers/unique_vector.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/symbol/symbol.h"
+#include "lang/wgsl/ast/diagnostic_control.h"
+#include "lang/wgsl/ast/variable.h"
+#include "lang/wgsl/sem/call.h"
+#include "utils/containers/unique_vector.h"
+#include "utils/containers/vector.h"
+#include "utils/symbol/symbol.h"
 
 // Forward declarations
 namespace tint::ast {

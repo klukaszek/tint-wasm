@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/attribute.h"
-#include "src/tint/lang/wgsl/ast/diagnostic_control.h"
+#include "lang/wgsl/ast/attribute.h"
+#include "lang/wgsl/ast/diagnostic_control.h"
 
 namespace tint::ast {
 

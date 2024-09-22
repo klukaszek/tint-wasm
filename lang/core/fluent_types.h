@@ -30,9 +30,9 @@
 
 #include <stdint.h>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/core/number.h"
+#include "lang/core/access.h"
+#include "lang/core/address_space.h"
+#include "lang/core/number.h"
 
 namespace tint::core::fluent_types {
 

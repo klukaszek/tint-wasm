@@ -32,17 +32,17 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/lang/core/binary_op.h"
-#include "src/tint/lang/core/builtin_fn.h"
-#include "src/tint/lang/core/evaluation_stage.h"
-#include "src/tint/lang/core/intrinsic/ctor_conv.h"
-#include "src/tint/lang/core/intrinsic/table_data.h"
-#include "src/tint/lang/core/parameter_usage.h"
-#include "src/tint/lang/core/unary_op.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/text/string.h"
-#include "src/tint/utils/text/string_stream.h"
-#include "src/tint/utils/text/styled_text.h"
+#include "lang/core/binary_op.h"
+#include "lang/core/builtin_fn.h"
+#include "lang/core/evaluation_stage.h"
+#include "lang/core/intrinsic/ctor_conv.h"
+#include "lang/core/intrinsic/table_data.h"
+#include "lang/core/parameter_usage.h"
+#include "lang/core/unary_op.h"
+#include "utils/containers/vector.h"
+#include "utils/text/string.h"
+#include "utils/text/string_stream.h"
+#include "utils/text/styled_text.h"
 
 // Forward declarations
 namespace tint::diag {

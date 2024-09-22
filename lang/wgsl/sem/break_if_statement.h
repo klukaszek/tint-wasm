@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_BREAK_IF_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_SEM_BREAK_IF_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/sem/statement.h"
+#include "lang/wgsl/sem/statement.h"
 
 // Forward declarations
 namespace tint::ast {

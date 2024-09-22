@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/type.h"
+#include "lang/core/type/type.h"
 
 namespace tint::core::type {
 

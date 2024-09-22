@@ -31,9 +31,9 @@
 #include <stdint.h>
 #include <utility>
 
-#include "src/tint/utils/ice/ice.h"
-#include "src/tint/utils/text/string_stream.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/ice/ice.h"
+#include "utils/text/string_stream.h"
+#include "utils/traits/traits.h"
 
 namespace tint {
 

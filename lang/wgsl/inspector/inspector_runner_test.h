@@ -33,9 +33,9 @@
 
 #include "gtest/gtest.h"
 
-#include "src/tint/lang/wgsl/inspector/inspector.h"
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/utils/diagnostic/source.h"
+#include "lang/wgsl/inspector/inspector.h"
+#include "lang/wgsl/program/program.h"
+#include "utils/diagnostic/source.h"
 
 namespace tint::inspector {
 

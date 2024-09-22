@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/call.h"
-#include "src/tint/lang/core/ir/function.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/ir/call.h"
+#include "lang/core/ir/function.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::ir {
 

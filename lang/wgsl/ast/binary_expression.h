@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_BINARY_EXPRESSION_H_
 #define SRC_TINT_LANG_WGSL_AST_BINARY_EXPRESSION_H_
 
-#include "src/tint/lang/core/binary_op.h"
-#include "src/tint/lang/wgsl/ast/expression.h"
+#include "lang/core/binary_op.h"
+#include "lang/wgsl/ast/expression.h"
 
 namespace tint::ast {
 

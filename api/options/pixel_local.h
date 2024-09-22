@@ -31,7 +31,7 @@
 #include <cstdint>
 #include <unordered_map>
 
-#include "src/tint/utils/reflection/reflection.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint {
 

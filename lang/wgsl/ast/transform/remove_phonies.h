@@ -31,7 +31,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::ast::transform {
 

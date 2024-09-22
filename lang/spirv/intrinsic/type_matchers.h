@@ -28,11 +28,11 @@
 #ifndef SRC_TINT_LANG_SPIRV_INTRINSIC_TYPE_MATCHERS_H_
 #define SRC_TINT_LANG_SPIRV_INTRINSIC_TYPE_MATCHERS_H_
 
-#include "src/tint/lang/core/intrinsic/table.h"
-#include "src/tint/lang/core/type/array.h"
-#include "src/tint/lang/core/type/manager.h"
-#include "src/tint/lang/core/type/struct.h"
-#include "src/tint/lang/spirv/type/sampled_image.h"
+#include "lang/core/intrinsic/table.h"
+#include "lang/core/type/array.h"
+#include "lang/core/type/manager.h"
+#include "lang/core/type/struct.h"
+#include "lang/spirv/type/sampled_image.h"
 
 namespace tint::spirv::intrinsic {
 

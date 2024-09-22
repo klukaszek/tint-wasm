@@ -30,17 +30,17 @@
 
 #include <string>
 
-#include "src/tint/lang/core/builtin_value.h"
-#include "src/tint/lang/core/interpolation_sampling.h"
-#include "src/tint/lang/core/interpolation_type.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
-#include "src/tint/lang/wgsl/resolver/dependency_graph.h"
-#include "src/tint/lang/wgsl/sem/builtin_enum_expression.h"
-#include "src/tint/lang/wgsl/sem/function_expression.h"
-#include "src/tint/lang/wgsl/sem/type_expression.h"
-#include "src/tint/utils/containers/map.h"
-#include "src/tint/utils/diagnostic/diagnostic.h"
-#include "src/tint/utils/text/styled_text.h"
+#include "lang/core/builtin_value.h"
+#include "lang/core/interpolation_sampling.h"
+#include "lang/core/interpolation_type.h"
+#include "lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/resolver/dependency_graph.h"
+#include "lang/wgsl/sem/builtin_enum_expression.h"
+#include "lang/wgsl/sem/function_expression.h"
+#include "lang/wgsl/sem/type_expression.h"
+#include "utils/containers/map.h"
+#include "utils/diagnostic/diagnostic.h"
+#include "utils/text/styled_text.h"
 
 namespace tint::resolver {
 

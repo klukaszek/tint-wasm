@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_SPIRV_WRITER_AST_RAISE_WHILE_TO_LOOP_H_
 #define SRC_TINT_LANG_SPIRV_WRITER_AST_RAISE_WHILE_TO_LOOP_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::spirv::writer {
 

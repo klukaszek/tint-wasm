@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/attribute.h"
-#include "src/tint/utils/containers/vector.h"
+#include "lang/wgsl/ast/attribute.h"
+#include "utils/containers/vector.h"
 
 // Forward declarations
 namespace tint::ast {

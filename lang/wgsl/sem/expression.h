@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_EXPRESSION_H_
 #define SRC_TINT_LANG_WGSL_SEM_EXPRESSION_H_
 
-#include "src/tint/lang/wgsl/ast/expression.h"
-#include "src/tint/lang/wgsl/sem/node.h"
+#include "lang/wgsl/ast/expression.h"
+#include "lang/wgsl/sem/node.h"
 
 // Forward declarations
 namespace tint::sem {

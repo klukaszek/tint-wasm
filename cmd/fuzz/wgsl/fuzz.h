@@ -32,12 +32,12 @@
 #include <tuple>
 #include <utility>
 
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/utils/bytes/buffer_reader.h"
-#include "src/tint/utils/bytes/decoder.h"
-#include "src/tint/utils/containers/enum_set.h"
-#include "src/tint/utils/containers/slice.h"
-#include "src/tint/utils/macros/static_init.h"
+#include "lang/wgsl/program/program.h"
+#include "utils/bytes/buffer_reader.h"
+#include "utils/bytes/decoder.h"
+#include "utils/containers/enum_set.h"
+#include "utils/containers/slice.h"
+#include "utils/macros/static_init.h"
 
 namespace tint::fuzz::wgsl {
 

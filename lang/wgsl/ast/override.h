@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/variable.h"
+#include "lang/wgsl/ast/variable.h"
 
 namespace tint::ast {
 

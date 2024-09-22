@@ -34,9 +34,9 @@
 #include <cstring>
 #include <utility>
 
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/math/math.h"
-#include "src/tint/utils/memory/bitcast.h"
+#include "utils/macros/compiler.h"
+#include "utils/math/math.h"
+#include "utils/memory/bitcast.h"
 
 namespace tint {
 

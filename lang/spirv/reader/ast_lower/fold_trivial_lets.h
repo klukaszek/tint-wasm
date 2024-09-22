@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_SPIRV_READER_AST_LOWER_FOLD_TRIVIAL_LETS_H_
 #define SRC_TINT_LANG_SPIRV_READER_AST_LOWER_FOLD_TRIVIAL_LETS_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::spirv::reader {
 

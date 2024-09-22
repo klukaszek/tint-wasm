@@ -30,11 +30,11 @@
 
 #include <string>
 
-#include "src/tint/lang/core/intrinsic/table_data.h"
-#include "src/tint/lang/core/ir/builtin_call.h"
-#include "src/tint/lang/wgsl/builtin_fn.h"
-#include "src/tint/lang/wgsl/intrinsic/dialect.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/intrinsic/table_data.h"
+#include "lang/core/ir/builtin_call.h"
+#include "lang/wgsl/builtin_fn.h"
+#include "lang/wgsl/intrinsic/dialect.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::wgsl::ir {
 

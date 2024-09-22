@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_CONST_ASSERT_H_
 #define SRC_TINT_LANG_WGSL_AST_CONST_ASSERT_H_
 
-#include "src/tint/lang/wgsl/ast/statement.h"
-#include "src/tint/lang/wgsl/ast/variable.h"
+#include "lang/wgsl/ast/statement.h"
+#include "lang/wgsl/ast/variable.h"
 
 namespace tint::ast {
 

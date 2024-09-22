@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/literal_expression.h"
+#include "lang/wgsl/ast/literal_expression.h"
 
 namespace tint::ast {
 

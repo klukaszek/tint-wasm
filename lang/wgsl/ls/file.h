@@ -36,13 +36,13 @@
 #include <type_traits>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/node.h"
-#include "src/tint/lang/wgsl/ls/utils.h"
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/lang/wgsl/sem/expression.h"
-#include "src/tint/lang/wgsl/sem/load.h"
-#include "src/tint/lang/wgsl/sem/materialize.h"
-#include "src/tint/utils/diagnostic/source.h"
+#include "lang/wgsl/ast/node.h"
+#include "lang/wgsl/ls/utils.h"
+#include "lang/wgsl/program/program.h"
+#include "lang/wgsl/sem/expression.h"
+#include "lang/wgsl/sem/load.h"
+#include "lang/wgsl/sem/materialize.h"
+#include "utils/diagnostic/source.h"
 
 namespace tint::wgsl::ls {
 

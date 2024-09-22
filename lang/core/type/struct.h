@@ -33,15 +33,15 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/core/builtin_value.h"
-#include "src/tint/lang/core/interpolation.h"
-#include "src/tint/lang/core/type/node.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/containers/hashset.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/symbol/symbol.h"
-#include "src/tint/utils/text/styled_text.h"
+#include "lang/core/address_space.h"
+#include "lang/core/builtin_value.h"
+#include "lang/core/interpolation.h"
+#include "lang/core/type/node.h"
+#include "lang/core/type/type.h"
+#include "utils/containers/hashset.h"
+#include "utils/containers/vector.h"
+#include "utils/symbol/symbol.h"
+#include "utils/text/styled_text.h"
 
 // Forward declarations
 namespace tint::core::type {

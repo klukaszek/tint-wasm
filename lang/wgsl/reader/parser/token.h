@@ -32,7 +32,7 @@
 #include <string_view>
 #include <variant>
 
-#include "src/tint/utils/diagnostic/source.h"
+#include "utils/diagnostic/source.h"
 
 namespace tint::wgsl::reader {
 

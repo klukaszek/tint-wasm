@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_CORE_IR_TRANSFORM_VECTORIZE_SCALAR_MATRIX_CONSTRUCTORS_H_
 #define SRC_TINT_LANG_CORE_IR_TRANSFORM_VECTORIZE_SCALAR_MATRIX_CONSTRUCTORS_H_
 
-#include "src/tint/utils/result/result.h"
+#include "utils/result/result.h"
 
 // Forward declarations.
 namespace tint::core::ir {

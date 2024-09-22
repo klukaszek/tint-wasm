@@ -30,7 +30,7 @@
 
 #include <cstdint>
 
-#include "src/tint/utils/text/string_stream.h"
+#include "utils/text/string_stream.h"
 
 namespace tint::glsl::writer {
 

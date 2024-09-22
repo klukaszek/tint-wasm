@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/core/type/type.h"
+#include "lang/core/access.h"
+#include "lang/core/address_space.h"
+#include "lang/core/type/type.h"
 
 namespace tint::core::type {
 

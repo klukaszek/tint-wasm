@@ -33,8 +33,8 @@
 #include <type_traits>
 #include <utility>
 
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/math/hash.h"
+#include "utils/traits/traits.h"
 
 namespace tint {
 

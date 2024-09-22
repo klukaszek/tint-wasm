@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/utils/reflection/reflection.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/reflection/reflection.h"
+#include "utils/result/result.h"
 
 // Forward declarations.
 namespace tint::core::ir {

@@ -33,12 +33,12 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/memory/block_allocator.h"
-#include "src/tint/utils/result/result.h"
-#include "src/tint/utils/strconv/parse_num.h"
-#include "src/tint/utils/text/string.h"
+#include "utils/containers/vector.h"
+#include "utils/macros/compiler.h"
+#include "utils/memory/block_allocator.h"
+#include "utils/result/result.h"
+#include "utils/strconv/parse_num.h"
+#include "utils/text/string.h"
 
 namespace tint::cli {
 

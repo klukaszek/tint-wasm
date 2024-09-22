@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_SPIRV_INTRINSIC_DIALECT_H_
 #define SRC_TINT_LANG_SPIRV_INTRINSIC_DIALECT_H_
 
-#include "src/tint/lang/core/intrinsic/table_data.h"
-#include "src/tint/lang/spirv/builtin_fn.h"
+#include "lang/core/intrinsic/table_data.h"
+#include "lang/spirv/builtin_fn.h"
 
 namespace tint::spirv::intrinsic {
 

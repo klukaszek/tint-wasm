@@ -34,7 +34,7 @@
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/wgsl/reader/parser/parser.h"
+#include "lang/wgsl/reader/parser/parser.h"
 
 namespace tint::wgsl::reader {
 

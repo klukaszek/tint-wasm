@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_WRITER_AST_PRINTER_AST_PRINTER_H_
 #define SRC_TINT_LANG_WGSL_WRITER_AST_PRINTER_AST_PRINTER_H_
 
-#include "src/tint/lang/core/binary_op.h"
-#include "src/tint/utils/generator/text_generator.h"
-#include "src/tint/utils/text/string_stream.h"
+#include "lang/core/binary_op.h"
+#include "utils/generator/text_generator.h"
+#include "utils/text/string_stream.h"
 
 // Forward declarations
 namespace tint {

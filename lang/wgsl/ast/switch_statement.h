@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_SWITCH_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_AST_SWITCH_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/ast/case_statement.h"
-#include "src/tint/lang/wgsl/ast/expression.h"
+#include "lang/wgsl/ast/case_statement.h"
+#include "lang/wgsl/ast/expression.h"
 
 namespace tint::ast {
 

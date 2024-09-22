@@ -34,12 +34,12 @@
 #include <tuple>
 #include <utility>
 
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/ice/ice.h"
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/math/math.h"
-#include "src/tint/utils/memory/aligned_storage.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/containers/vector.h"
+#include "utils/ice/ice.h"
+#include "utils/math/hash.h"
+#include "utils/math/math.h"
+#include "utils/memory/aligned_storage.h"
+#include "utils/traits/traits.h"
 
 namespace tint {
 

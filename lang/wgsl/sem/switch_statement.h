@@ -30,7 +30,7 @@
 
 #include <vector>
 
-#include "src/tint/lang/wgsl/sem/block_statement.h"
+#include "lang/wgsl/sem/block_statement.h"
 
 // Forward declarations
 namespace tint::ast {

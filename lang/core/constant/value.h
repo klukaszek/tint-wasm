@@ -30,11 +30,11 @@
 
 #include <variant>
 
-#include "src/tint/lang/core/constant/clone_context.h"
-#include "src/tint/lang/core/constant/node.h"
-#include "src/tint/lang/core/number.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/constant/clone_context.h"
+#include "lang/core/constant/node.h"
+#include "lang/core/number.h"
+#include "lang/core/type/type.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::constant {
 

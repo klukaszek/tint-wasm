@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_READER_READER_H_
 #define SRC_TINT_LANG_WGSL_READER_READER_H_
 
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/lang/wgsl/reader/options.h"
+#include "lang/core/ir/module.h"
+#include "lang/wgsl/program/program.h"
+#include "lang/wgsl/reader/options.h"
 
 namespace tint::ast {
 class Enable;

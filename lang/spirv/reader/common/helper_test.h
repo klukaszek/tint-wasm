@@ -32,7 +32,7 @@
 #include <vector>
 
 #include "spirv-tools/libspirv.hpp"
-#include "src/tint/utils/result/result.h"
+#include "utils/result/result.h"
 
 namespace tint::spirv::reader {
 

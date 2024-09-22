@@ -30,8 +30,8 @@
 
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/index_accessor_expression.h"
-#include "src/tint/lang/wgsl/sem/accessor_expression.h"
+#include "lang/wgsl/ast/index_accessor_expression.h"
+#include "lang/wgsl/sem/accessor_expression.h"
 
 namespace tint::sem {
 

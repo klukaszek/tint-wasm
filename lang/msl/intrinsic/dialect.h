@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_MSL_INTRINSIC_DIALECT_H_
 #define SRC_TINT_LANG_MSL_INTRINSIC_DIALECT_H_
 
-#include "src/tint/lang/core/intrinsic/table_data.h"
-#include "src/tint/lang/msl/builtin_fn.h"
+#include "lang/core/intrinsic/table_data.h"
+#include "lang/msl/builtin_fn.h"
 
 namespace tint::msl::intrinsic {
 

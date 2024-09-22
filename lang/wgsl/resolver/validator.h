@@ -32,19 +32,19 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/lang/core/evaluation_stage.h"
-#include "src/tint/lang/core/type/input_attachment.h"
-#include "src/tint/lang/wgsl/ast/input_attachment_index_attribute.h"
-#include "src/tint/lang/wgsl/ast/pipeline_stage.h"
-#include "src/tint/lang/wgsl/common/allowed_features.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
-#include "src/tint/lang/wgsl/resolver/sem_helper.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/containers/scope_stack.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/diagnostic/source.h"
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/text/styled_text.h"
+#include "lang/core/evaluation_stage.h"
+#include "lang/core/type/input_attachment.h"
+#include "lang/wgsl/ast/input_attachment_index_attribute.h"
+#include "lang/wgsl/ast/pipeline_stage.h"
+#include "lang/wgsl/common/allowed_features.h"
+#include "lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/resolver/sem_helper.h"
+#include "utils/containers/hashmap.h"
+#include "utils/containers/scope_stack.h"
+#include "utils/containers/vector.h"
+#include "utils/diagnostic/source.h"
+#include "utils/math/hash.h"
+#include "utils/text/styled_text.h"
 
 // Forward declarations
 namespace tint::ast {

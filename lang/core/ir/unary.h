@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/operand_instruction.h"
-#include "src/tint/lang/core/unary_op.h"
+#include "lang/core/ir/operand_instruction.h"
+#include "lang/core/unary_op.h"
 
 // Forward declarations
 namespace tint::core::intrinsic {

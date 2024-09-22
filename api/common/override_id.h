@@ -31,8 +31,8 @@
 #include <stdint.h>
 #include <functional>
 
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "utils/math/hash.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint {
 

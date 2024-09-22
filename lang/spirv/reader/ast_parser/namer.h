@@ -32,7 +32,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "src/tint/lang/spirv/reader/ast_parser/fail_stream.h"
+#include "lang/spirv/reader/ast_parser/fail_stream.h"
 
 namespace tint::spirv::reader::ast_parser {
 

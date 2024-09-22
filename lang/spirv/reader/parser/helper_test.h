@@ -34,11 +34,11 @@
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "src/tint/lang/core/ir/disassembly.h"
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/lang/core/ir/validator.h"
-#include "src/tint/lang/spirv/reader/common/helper_test.h"
-#include "src/tint/lang/spirv/reader/parser/parser.h"
+#include "lang/core/ir/disassembly.h"
+#include "lang/core/ir/module.h"
+#include "lang/core/ir/validator.h"
+#include "lang/spirv/reader/common/helper_test.h"
+#include "lang/spirv/reader/parser/parser.h"
 
 namespace tint::spirv::reader {
 

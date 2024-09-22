@@ -31,8 +31,8 @@
 #include <memory>
 #include <utility>
 
-#include "src/tint/lang/core/ir/builder.h"
-#include "src/tint/lang/core/type/manager.h"
+#include "lang/core/ir/builder.h"
+#include "lang/core/type/manager.h"
 
 namespace tint::core::ir::transform {
 

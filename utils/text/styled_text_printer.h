@@ -31,8 +31,8 @@
 #include <memory>
 #include <string>
 
-#include "src/tint/utils/text/styled_text.h"
-#include "src/tint/utils/text/styled_text_theme.h"
+#include "utils/text/styled_text.h"
+#include "utils/text/styled_text_theme.h"
 
 /// Forward declarations
 namespace tint {

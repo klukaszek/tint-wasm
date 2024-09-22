@@ -34,11 +34,11 @@
 #include <type_traits>
 #include <utility>
 
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/math/crc32.h"
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/rtti/ignore.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/macros/compiler.h"
+#include "utils/math/crc32.h"
+#include "utils/math/hash.h"
+#include "utils/rtti/ignore.h"
+#include "utils/traits/traits.h"
 
 #if defined(__clang__)
 /// Temporarily disable certain warnings when using Castable API

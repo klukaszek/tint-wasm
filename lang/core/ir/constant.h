@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_CORE_IR_CONSTANT_H_
 #define SRC_TINT_LANG_CORE_IR_CONSTANT_H_
 
-#include "src/tint/lang/core/constant/value.h"
-#include "src/tint/lang/core/ir/value.h"
+#include "lang/core/constant/value.h"
+#include "lang/core/ir/value.h"
 
 namespace tint::core::ir {
 

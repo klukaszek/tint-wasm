@@ -32,9 +32,9 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/transform/data.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/lang/wgsl/program/program.h"
+#include "lang/wgsl/ast/transform/data.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/program/program.h"
 
 namespace tint::ast::transform {
 

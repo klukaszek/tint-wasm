@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/utils/bytes/endianness.h"
-#include "src/tint/utils/bytes/swap.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/bytes/endianness.h"
+#include "utils/bytes/swap.h"
+#include "utils/result/result.h"
 namespace tint::bytes {
 
 /// A binary stream reader interface

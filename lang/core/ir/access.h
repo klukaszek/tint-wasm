@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/operand_instruction.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/ir/operand_instruction.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::ir {
 

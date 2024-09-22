@@ -30,8 +30,8 @@
 
 #include <utility>
 
-#include "src/tint/lang/core/ir/block.h"
-#include "src/tint/lang/core/ir/block_param.h"
+#include "lang/core/ir/block.h"
+#include "lang/core/ir/block_param.h"
 
 namespace tint::core::ir {
 

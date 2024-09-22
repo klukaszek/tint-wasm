@@ -36,15 +36,15 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/api/common/override_id.h"
+#include "api/common/override_id.h"
 
-#include "src/tint/lang/core/builtin_value.h"
-#include "src/tint/lang/wgsl/inspector/entry_point.h"
-#include "src/tint/lang/wgsl/inspector/resource_binding.h"
-#include "src/tint/lang/wgsl/inspector/scalar.h"
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/lang/wgsl/sem/sampler_texture_pair.h"
-#include "src/tint/utils/containers/unique_vector.h"
+#include "lang/core/builtin_value.h"
+#include "lang/wgsl/inspector/entry_point.h"
+#include "lang/wgsl/inspector/resource_binding.h"
+#include "lang/wgsl/inspector/scalar.h"
+#include "lang/wgsl/program/program.h"
+#include "lang/wgsl/sem/sampler_texture_pair.h"
+#include "utils/containers/unique_vector.h"
 
 namespace tint::inspector {
 

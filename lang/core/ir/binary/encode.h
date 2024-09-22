@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/containers/vector.h"
+#include "utils/result/result.h"
 
 // Forward declaration
 namespace tint::core::ir {

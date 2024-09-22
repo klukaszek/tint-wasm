@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_CORE_IR_TRANSFORM_RENAME_CONFLICTS_H_
 #define SRC_TINT_LANG_CORE_IR_TRANSFORM_RENAME_CONFLICTS_H_
 
-#include "src/tint/utils/result/result.h"
+#include "utils/result/result.h"
 
 // Forward declarations.
 namespace tint::core::ir {

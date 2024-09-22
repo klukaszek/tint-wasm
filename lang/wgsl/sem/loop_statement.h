@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_LOOP_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_SEM_LOOP_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/sem/block_statement.h"
+#include "lang/wgsl/sem/block_statement.h"
 
 // Forward declarations
 namespace tint::ast {

@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_RESOLVER_UNRESOLVED_IDENTIFIER_H_
 #define SRC_TINT_LANG_WGSL_RESOLVER_UNRESOLVED_IDENTIFIER_H_
 
-#include "src/tint/lang/wgsl/ast/identifier_expression.h"
-#include "src/tint/lang/wgsl/sem/expression.h"
+#include "lang/wgsl/ast/identifier_expression.h"
+#include "lang/wgsl/sem/expression.h"
 
 namespace tint::resolver {
 

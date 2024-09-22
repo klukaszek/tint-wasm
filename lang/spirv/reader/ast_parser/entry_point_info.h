@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/pipeline_stage.h"
-#include "src/tint/utils/containers/vector.h"
+#include "lang/wgsl/ast/pipeline_stage.h"
+#include "utils/containers/vector.h"
 
 namespace tint::spirv::reader::ast_parser {
 

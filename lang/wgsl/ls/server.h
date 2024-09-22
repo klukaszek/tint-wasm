@@ -35,9 +35,9 @@
 #include "langsvr/lsp/lsp.h"
 #include "langsvr/session.h"
 
-#include "src/tint/lang/wgsl/ls/file.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/text/string_stream.h"
+#include "lang/wgsl/ls/file.h"
+#include "utils/containers/hashmap.h"
+#include "utils/text/string_stream.h"
 
 namespace tint::wgsl::ls {
 

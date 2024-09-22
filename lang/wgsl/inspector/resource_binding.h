@@ -31,9 +31,9 @@
 #include <cstdint>
 #include <string>
 
-#include "src/tint/lang/core/texel_format.h"
-#include "src/tint/lang/core/type/texture_dimension.h"
-#include "src/tint/lang/core/type/type.h"
+#include "lang/core/texel_format.h"
+#include "lang/core/type/texture_dimension.h"
+#include "lang/core/type/type.h"
 
 namespace tint::inspector {
 

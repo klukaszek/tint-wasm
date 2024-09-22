@@ -32,15 +32,15 @@
 #include <string>
 #include <vector>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/core/texel_format.h"
-#include "src/tint/lang/core/type/sampler_kind.h"
-#include "src/tint/lang/core/type/texture_dimension.h"
-#include "src/tint/lang/wgsl/ast/type.h"
-#include "src/tint/utils/memory/block_allocator.h"
-#include "src/tint/utils/rtti/castable.h"
-#include "src/tint/utils/symbol/symbol.h"
+#include "lang/core/access.h"
+#include "lang/core/address_space.h"
+#include "lang/core/texel_format.h"
+#include "lang/core/type/sampler_kind.h"
+#include "lang/core/type/texture_dimension.h"
+#include "lang/wgsl/ast/type.h"
+#include "utils/memory/block_allocator.h"
+#include "utils/rtti/castable.h"
+#include "utils/symbol/symbol.h"
 
 // Forward declarations
 namespace tint {

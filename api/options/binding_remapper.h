@@ -30,7 +30,7 @@
 
 #include <unordered_map>
 
-#include "src/tint/api/common/binding_point.h"
+#include "api/common/binding_point.h"
 
 namespace tint {
 

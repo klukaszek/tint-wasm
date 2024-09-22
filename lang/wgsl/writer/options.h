@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_WRITER_OPTIONS_H_
 #define SRC_TINT_LANG_WGSL_WRITER_OPTIONS_H_
 
-#include "src/tint/utils/reflection/reflection.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::wgsl::writer {
 

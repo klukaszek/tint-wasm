@@ -37,7 +37,7 @@
 #include <variant>
 #include <vector>
 
-#include "src/tint/utils/math/crc32.h"
+#include "utils/math/crc32.h"
 
 namespace tint {
 

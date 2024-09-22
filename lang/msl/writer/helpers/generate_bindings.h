@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_MSL_WRITER_HELPERS_GENERATE_BINDINGS_H_
 #define SRC_TINT_LANG_MSL_WRITER_HELPERS_GENERATE_BINDINGS_H_
 
-#include "src/tint/lang/msl/writer/common/options.h"
+#include "lang/msl/writer/common/options.h"
 
 // Forward declarations
 namespace tint {

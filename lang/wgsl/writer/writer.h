@@ -28,10 +28,10 @@
 #ifndef SRC_TINT_LANG_WGSL_WRITER_WRITER_H_
 #define SRC_TINT_LANG_WGSL_WRITER_WRITER_H_
 
-#include "src/tint/lang/wgsl/writer/ir_to_program/program_options.h"
-#include "src/tint/lang/wgsl/writer/options.h"
-#include "src/tint/lang/wgsl/writer/output.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/wgsl/writer/ir_to_program/program_options.h"
+#include "lang/wgsl/writer/options.h"
+#include "lang/wgsl/writer/output.h"
+#include "utils/result/result.h"
 
 // Forward declarations
 namespace tint {

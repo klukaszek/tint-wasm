@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/vector.h"
+#include "lang/core/type/vector.h"
 
 // Forward declarations
 namespace tint::core::type {

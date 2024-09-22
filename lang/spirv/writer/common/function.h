@@ -30,7 +30,7 @@
 
 #include <functional>
 
-#include "src/tint/lang/spirv/writer/common/instruction.h"
+#include "lang/spirv/writer/common/instruction.h"
 
 namespace tint::spirv::writer {
 

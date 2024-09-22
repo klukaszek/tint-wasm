@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/abstract_numeric.h"
+#include "lang/core/type/abstract_numeric.h"
 
 namespace tint::core::type {
 

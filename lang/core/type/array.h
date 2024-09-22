@@ -33,10 +33,10 @@
 #include <string>
 #include <variant>
 
-#include "src/tint/lang/core/type/array_count.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/containers/unique_vector.h"
-#include "src/tint/utils/macros/compiler.h"
+#include "lang/core/type/array_count.h"
+#include "lang/core/type/type.h"
+#include "utils/containers/unique_vector.h"
+#include "utils/macros/compiler.h"
 
 namespace tint::core::type {
 

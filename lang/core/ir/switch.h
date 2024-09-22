@@ -31,8 +31,8 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/lang/core/ir/control_instruction.h"
-#include "src/tint/utils/containers/const_propagating_ptr.h"
+#include "lang/core/ir/control_instruction.h"
+#include "utils/containers/const_propagating_ptr.h"
 
 // Forward declarations
 namespace tint::core::ir {

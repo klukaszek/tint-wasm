@@ -30,9 +30,9 @@
 
 #include <utility>
 
-#include "src/tint/lang/wgsl/ast/clone_context.h"
-#include "src/tint/lang/wgsl/program/program.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/ast/clone_context.h"
+#include "lang/wgsl/program/program.h"
+#include "lang/wgsl/program/program_builder.h"
 
 // Forward declarations
 namespace tint::program {

@@ -30,10 +30,10 @@
 
 #include <string>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/texel_format.h"
-#include "src/tint/lang/core/type/texture.h"
-#include "src/tint/lang/core/type/texture_dimension.h"
+#include "lang/core/access.h"
+#include "lang/core/texel_format.h"
+#include "lang/core/type/texture.h"
+#include "lang/core/type/texture_dimension.h"
 
 // Forward declarations
 namespace tint::core::type {

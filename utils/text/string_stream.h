@@ -36,7 +36,7 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/utils/text/unicode.h"
+#include "utils/text/unicode.h"
 
 namespace tint {
 

@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_CORE_IR_CORE_BINARY_H_
 #define SRC_TINT_LANG_CORE_IR_CORE_BINARY_H_
 
-#include "src/tint/lang/core/ir/binary.h"
+#include "lang/core/ir/binary.h"
 
 namespace tint::core::ir {
 

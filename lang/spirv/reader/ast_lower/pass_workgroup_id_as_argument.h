@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_SPIRV_READER_AST_LOWER_PASS_WORKGROUP_ID_AS_ARGUMENT_H_
 #define SRC_TINT_LANG_SPIRV_READER_AST_LOWER_PASS_WORKGROUP_ID_AS_ARGUMENT_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::spirv::reader {
 

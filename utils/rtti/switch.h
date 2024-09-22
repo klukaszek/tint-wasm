@@ -31,10 +31,10 @@
 #include <tuple>
 #include <utility>
 
-#include "src/tint/utils/macros/defer.h"
-#include "src/tint/utils/memory/aligned_storage.h"
-#include "src/tint/utils/rtti/castable.h"
-#include "src/tint/utils/rtti/ignore.h"
+#include "utils/macros/defer.h"
+#include "utils/memory/aligned_storage.h"
+#include "utils/rtti/castable.h"
+#include "utils/rtti/ignore.h"
 
 namespace tint {
 

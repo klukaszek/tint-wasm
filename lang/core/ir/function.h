@@ -32,12 +32,12 @@
 #include <optional>
 #include <utility>
 
-#include "src/tint/lang/core/ir/function_param.h"
-#include "src/tint/lang/core/ir/location.h"
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/containers/const_propagating_ptr.h"
-#include "src/tint/utils/ice/ice.h"
+#include "lang/core/ir/function_param.h"
+#include "lang/core/ir/location.h"
+#include "lang/core/ir/value.h"
+#include "lang/core/type/type.h"
+#include "utils/containers/const_propagating_ptr.h"
+#include "utils/ice/ice.h"
 
 // Forward declarations
 namespace tint::core::ir {

@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/texture.h"
-#include "src/tint/lang/core/type/texture_dimension.h"
+#include "lang/core/type/texture.h"
+#include "lang/core/type/texture_dimension.h"
 
 namespace tint::core::type {
 

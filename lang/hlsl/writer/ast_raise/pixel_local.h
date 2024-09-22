@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/core/texel_format.h"
-#include "src/tint/lang/wgsl/ast/internal_attribute.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/core/texel_format.h"
+#include "lang/wgsl/ast/internal_attribute.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::hlsl::writer {
 

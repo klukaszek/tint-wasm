@@ -30,7 +30,7 @@
 
 #include <functional>
 
-#include "src/tint/lang/core/type/node.h"
+#include "lang/core/type/node.h"
 
 namespace tint::core::type {
 

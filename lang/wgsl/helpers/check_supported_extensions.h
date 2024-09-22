@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_HELPERS_CHECK_SUPPORTED_EXTENSIONS_H_
 #define SRC_TINT_LANG_WGSL_HELPERS_CHECK_SUPPORTED_EXTENSIONS_H_
 
-#include "src/tint/lang/wgsl/extension.h"
-#include "src/tint/utils/containers/vector.h"
+#include "lang/wgsl/extension.h"
+#include "utils/containers/vector.h"
 
 namespace tint::ast {
 class Module;

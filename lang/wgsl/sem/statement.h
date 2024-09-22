@@ -28,11 +28,11 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_SEM_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/ast/diagnostic_control.h"
-#include "src/tint/lang/wgsl/sem/behavior.h"
-#include "src/tint/lang/wgsl/sem/node.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/symbol/symbol.h"
+#include "lang/wgsl/ast/diagnostic_control.h"
+#include "lang/wgsl/sem/behavior.h"
+#include "lang/wgsl/sem/node.h"
+#include "utils/containers/hashmap.h"
+#include "utils/symbol/symbol.h"
 
 // Forward declarations
 namespace tint::ast {

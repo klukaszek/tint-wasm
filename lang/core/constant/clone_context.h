@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_CORE_CONSTANT_CLONE_CONTEXT_H_
 #define SRC_TINT_LANG_CORE_CONSTANT_CLONE_CONTEXT_H_
 
-#include "src/tint/lang/core/type/clone_context.h"
+#include "lang/core/type/clone_context.h"
 
 // Forward declarations
 namespace tint::core::constant {

@@ -33,10 +33,10 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/diagnostic/source.h"
-#include "src/tint/utils/text/styled_text.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/containers/vector.h"
+#include "utils/diagnostic/source.h"
+#include "utils/text/styled_text.h"
+#include "utils/traits/traits.h"
 
 namespace tint::diag {
 

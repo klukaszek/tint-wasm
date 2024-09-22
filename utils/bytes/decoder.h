@@ -38,8 +38,8 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/utils/bytes/reader.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "utils/bytes/reader.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::bytes {
 

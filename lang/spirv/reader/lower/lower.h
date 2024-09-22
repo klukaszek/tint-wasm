@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_SPIRV_READER_LOWER_LOWER_H_
 #define SRC_TINT_LANG_SPIRV_READER_LOWER_LOWER_H_
 
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/core/ir/module.h"
+#include "utils/result/result.h"
 
 namespace tint::spirv::reader {
 

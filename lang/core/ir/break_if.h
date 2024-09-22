@@ -30,10 +30,10 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/exit.h"
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/utils/containers/const_propagating_ptr.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/ir/exit.h"
+#include "lang/core/ir/value.h"
+#include "utils/containers/const_propagating_ptr.h"
+#include "utils/rtti/castable.h"
 
 // Forward declarations
 namespace tint::core::ir {

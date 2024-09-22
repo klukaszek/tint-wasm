@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/internal_attribute.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "lang/wgsl/ast/internal_attribute.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::ast::transform {
 

@@ -31,7 +31,7 @@
 #include <stdint.h>
 #include <optional>
 
-#include "src/tint/utils/math/hash.h"
+#include "utils/math/hash.h"
 
 /// Forward declarations
 namespace tint {

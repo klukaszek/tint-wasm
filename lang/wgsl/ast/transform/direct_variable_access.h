@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TRANSFORM_DIRECT_VARIABLE_ACCESS_H_
 #define SRC_TINT_LANG_WGSL_AST_TRANSFORM_DIRECT_VARIABLE_ACCESS_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::ast::transform {
 
@@ -42,7 +42,7 @@ namespace tint::ast::transform {
 /// unique variable. Calls to specialized functions are transformed so that the pointer arguments
 /// are replaced with an array of access-chain indicies, and if the pointer is in the 'function' or
 /// 'private' address space, also with a pointer to the root object. For more information, see the
-/// comments in src/tint/lang/wgsl/ast/transform/direct_variable_access.cc.
+/// comments in lang/wgsl/ast/transform/direct_variable_access.cc.
 ///
 /// @note DirectVariableAccess requires the transform::Unshadow transform to have been run first.
 class DirectVariableAccess final : public Castable<DirectVariableAccess, Transform> {

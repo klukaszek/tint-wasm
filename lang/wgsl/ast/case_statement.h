@@ -30,8 +30,8 @@
 
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/block_statement.h"
-#include "src/tint/lang/wgsl/ast/case_selector.h"
+#include "lang/wgsl/ast/block_statement.h"
+#include "lang/wgsl/ast/case_selector.h"
 
 namespace tint::ast {
 

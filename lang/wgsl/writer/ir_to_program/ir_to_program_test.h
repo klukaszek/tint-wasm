@@ -31,8 +31,8 @@
 #include <string>
 #include <utility>
 
-#include "src/tint/lang/core/ir/ir_helper_test.h"
-#include "src/tint/lang/core/type/reference.h"
+#include "lang/core/ir/ir_helper_test.h"
+#include "lang/core/type/reference.h"
 
 namespace tint::wgsl::writer {
 

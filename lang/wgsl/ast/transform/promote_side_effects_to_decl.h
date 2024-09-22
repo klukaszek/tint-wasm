@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TRANSFORM_PROMOTE_SIDE_EFFECTS_TO_DECL_H_
 #define SRC_TINT_LANG_WGSL_AST_TRANSFORM_PROMOTE_SIDE_EFFECTS_TO_DECL_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::ast::transform {
 

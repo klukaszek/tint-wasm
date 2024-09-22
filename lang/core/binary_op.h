@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_CORE_BINARY_OP_H_
 #define SRC_TINT_LANG_CORE_BINARY_OP_H_
 
-#include "src/tint/utils/traits/traits.h"
+#include "utils/traits/traits.h"
 
 namespace tint::core {
 

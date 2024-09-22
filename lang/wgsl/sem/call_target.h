@@ -30,11 +30,11 @@
 
 #include <vector>
 
-#include "src/tint/lang/core/type/sampler.h"
-#include "src/tint/lang/wgsl/sem/node.h"
-#include "src/tint/lang/wgsl/sem/variable.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/math/hash.h"
+#include "lang/core/type/sampler.h"
+#include "lang/wgsl/sem/node.h"
+#include "lang/wgsl/sem/variable.h"
+#include "utils/containers/vector.h"
+#include "utils/math/hash.h"
 
 namespace tint::sem {
 

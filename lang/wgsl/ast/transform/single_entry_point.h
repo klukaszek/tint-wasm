@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::ast::transform {
 

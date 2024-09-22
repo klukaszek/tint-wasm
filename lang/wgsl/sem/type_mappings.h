@@ -30,7 +30,7 @@
 
 #include <type_traits>
 
-#include "src/tint/lang/wgsl/sem/builtin_enum_expression.h"
+#include "lang/wgsl/sem/builtin_enum_expression.h"
 
 // Forward declarations
 namespace tint {

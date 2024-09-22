@@ -33,9 +33,9 @@
 #include <string>
 #include <vector>
 
-#include "src/tint/lang/spirv/writer/common/function.h"
-#include "src/tint/lang/spirv/writer/common/instruction.h"
-#include "src/tint/utils/containers/hashset.h"
+#include "lang/spirv/writer/common/function.h"
+#include "lang/spirv/writer/common/instruction.h"
+#include "utils/containers/hashset.h"
 
 namespace tint::spirv::writer {
 

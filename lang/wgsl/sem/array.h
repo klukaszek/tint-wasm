@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_ARRAY_H_
 #define SRC_TINT_LANG_WGSL_SEM_ARRAY_H_
 
-#include "src/tint/lang/core/type/array.h"
-#include "src/tint/utils/containers/unique_vector.h"
+#include "lang/core/type/array.h"
+#include "utils/containers/unique_vector.h"
 
 /// Forward declarations
 namespace tint::sem {

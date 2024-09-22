@@ -30,10 +30,10 @@
 
 #include <functional>
 
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/lang/core/ir/var.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/containers/unique_vector.h"
+#include "lang/core/ir/module.h"
+#include "lang/core/ir/var.h"
+#include "utils/containers/hashmap.h"
+#include "utils/containers/unique_vector.h"
 
 // Forward declarations.
 namespace tint::core::ir {

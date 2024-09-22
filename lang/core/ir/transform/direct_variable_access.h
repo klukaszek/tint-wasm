@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_CORE_IR_TRANSFORM_DIRECT_VARIABLE_ACCESS_H_
 #define SRC_TINT_LANG_CORE_IR_TRANSFORM_DIRECT_VARIABLE_ACCESS_H_
 
-#include "src/tint/utils/reflection/reflection.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/reflection/reflection.h"
+#include "utils/result/result.h"
 
 // Forward declarations.
 namespace tint::core::ir {
@@ -58,7 +58,7 @@ struct DirectVariableAccessOptions {
 /// unique variable. Calls to specialized functions are transformed so that the pointer arguments
 /// are replaced with an array of access-chain indicies, and if the pointer is in the 'function' or
 /// 'private' address space, also with a pointer to the root object. For more information, see the
-/// comments in src/tint/lang/wgsl/ast/transform/direct_variable_access.cc.
+/// comments in lang/wgsl/ast/transform/direct_variable_access.cc.
 ///
 /// @param module the module to transform
 /// @returns error diagnostics on failure

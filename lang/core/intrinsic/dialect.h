@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_CORE_INTRINSIC_DIALECT_H_
 #define SRC_TINT_LANG_CORE_INTRINSIC_DIALECT_H_
 
-#include "src/tint/lang/core/builtin_fn.h"
-#include "src/tint/lang/core/intrinsic/ctor_conv.h"
-#include "src/tint/lang/core/intrinsic/table_data.h"
+#include "lang/core/builtin_fn.h"
+#include "lang/core/intrinsic/ctor_conv.h"
+#include "lang/core/intrinsic/table_data.h"
 
 namespace tint::core::intrinsic {
 

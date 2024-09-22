@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_CORE_IR_INSTRUCTION_RESULT_H_
 #define SRC_TINT_LANG_CORE_IR_INSTRUCTION_RESULT_H_
 
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/utils/text/string_stream.h"
+#include "lang/core/ir/value.h"
+#include "utils/text/string_stream.h"
 
 namespace tint::core::ir {
 

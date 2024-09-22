@@ -34,10 +34,10 @@
 #include <limits>
 #include <optional>
 
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/result/result.h"
-#include "src/tint/utils/text/string_stream.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/macros/compiler.h"
+#include "utils/result/result.h"
+#include "utils/text/string_stream.h"
+#include "utils/traits/traits.h"
 
 // Forward declaration
 namespace tint::core {

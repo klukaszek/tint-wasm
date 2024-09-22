@@ -31,15 +31,15 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/wgsl/ast/attribute.h"
-#include "src/tint/lang/wgsl/ast/binding_attribute.h"
-#include "src/tint/lang/wgsl/ast/expression.h"
-#include "src/tint/lang/wgsl/ast/group_attribute.h"
-#include "src/tint/lang/wgsl/ast/input_attachment_index_attribute.h"
-#include "src/tint/lang/wgsl/ast/node.h"
-#include "src/tint/lang/wgsl/ast/type.h"
+#include "lang/core/access.h"
+#include "lang/core/address_space.h"
+#include "lang/wgsl/ast/attribute.h"
+#include "lang/wgsl/ast/binding_attribute.h"
+#include "lang/wgsl/ast/expression.h"
+#include "lang/wgsl/ast/group_attribute.h"
+#include "lang/wgsl/ast/input_attachment_index_attribute.h"
+#include "lang/wgsl/ast/node.h"
+#include "lang/wgsl/ast/type.h"
 
 // Forward declarations
 namespace tint::ast {

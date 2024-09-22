@@ -31,8 +31,8 @@
 #include <algorithm>
 #include <string>
 
-#include "src/tint/utils/bytes/reader.h"
-#include "src/tint/utils/ice/ice.h"
+#include "utils/bytes/reader.h"
+#include "utils/ice/ice.h"
 
 namespace tint::bytes {
 

@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/operand_instruction.h"
+#include "lang/core/ir/operand_instruction.h"
 
 namespace tint::core::ir {
 

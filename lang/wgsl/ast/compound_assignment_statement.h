@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_COMPOUND_ASSIGNMENT_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_AST_COMPOUND_ASSIGNMENT_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/ast/binary_expression.h"
-#include "src/tint/lang/wgsl/ast/expression.h"
-#include "src/tint/lang/wgsl/ast/statement.h"
+#include "lang/wgsl/ast/binary_expression.h"
+#include "lang/wgsl/ast/expression.h"
+#include "lang/wgsl/ast/statement.h"
 
 namespace tint::ast {
 

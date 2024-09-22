@@ -30,7 +30,7 @@
 
 #include <stdint.h>
 
-#include "src/tint/utils/containers/vector.h"
+#include "utils/containers/vector.h"
 
 namespace tint {
 

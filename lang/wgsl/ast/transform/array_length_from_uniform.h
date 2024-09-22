@@ -31,9 +31,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "src/tint/api/common/binding_point.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "api/common/binding_point.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::ast::transform {
 

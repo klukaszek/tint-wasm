@@ -32,18 +32,18 @@
 #include <string>
 #include <string_view>
 
-#include "src/tint/lang/core/binary_op.h"
-#include "src/tint/lang/core/ir/binary.h"
-#include "src/tint/lang/core/ir/block.h"
-#include "src/tint/lang/core/ir/block_param.h"
-#include "src/tint/lang/core/ir/if.h"
-#include "src/tint/lang/core/ir/loop.h"
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/lang/core/ir/switch.h"
-#include "src/tint/lang/core/ir/unary.h"
-#include "src/tint/utils/containers/hashmap.h"
-#include "src/tint/utils/containers/hashset.h"
-#include "src/tint/utils/text/styled_text.h"
+#include "lang/core/binary_op.h"
+#include "lang/core/ir/binary.h"
+#include "lang/core/ir/block.h"
+#include "lang/core/ir/block_param.h"
+#include "lang/core/ir/if.h"
+#include "lang/core/ir/loop.h"
+#include "lang/core/ir/module.h"
+#include "lang/core/ir/switch.h"
+#include "lang/core/ir/unary.h"
+#include "utils/containers/hashmap.h"
+#include "utils/containers/hashset.h"
+#include "utils/text/styled_text.h"
 
 // Forward declarations.
 namespace tint::core::type {

@@ -30,7 +30,7 @@
 
 #include "langsvr/reader.h"
 #include "langsvr/writer.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/result/result.h"
 
 namespace tint::wgsl::ls {
 

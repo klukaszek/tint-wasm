@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/attribute.h"
+#include "lang/wgsl/ast/attribute.h"
 
 // Forward declarations
 namespace tint::ast {

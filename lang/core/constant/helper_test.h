@@ -29,7 +29,7 @@
 #define SRC_TINT_LANG_CORE_CONSTANT_HELPER_TEST_H_
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/program/program_builder.h"
 
 namespace tint::core::constant {
 

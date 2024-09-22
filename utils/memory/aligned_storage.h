@@ -30,7 +30,7 @@
 
 #include <cstddef>
 
-#include "src/tint/utils/memory/bitcast.h"
+#include "utils/memory/bitcast.h"
 
 namespace tint {
 

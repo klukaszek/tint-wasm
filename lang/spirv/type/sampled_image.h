@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/constant.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/core/ir/constant.h"
+#include "lang/core/type/type.h"
+#include "utils/result/result.h"
 
 namespace tint::spirv::type {
 

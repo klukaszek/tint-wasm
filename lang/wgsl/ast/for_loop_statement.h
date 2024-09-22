@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_FOR_LOOP_STATEMENT_H_
 #define SRC_TINT_LANG_WGSL_AST_FOR_LOOP_STATEMENT_H_
 
-#include "src/tint/lang/wgsl/ast/block_statement.h"
+#include "lang/wgsl/ast/block_statement.h"
 
 namespace tint::ast {
 

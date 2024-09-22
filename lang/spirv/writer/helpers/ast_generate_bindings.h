@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_SPIRV_WRITER_HELPERS_AST_GENERATE_BINDINGS_H_
 #define SRC_TINT_LANG_SPIRV_WRITER_HELPERS_AST_GENERATE_BINDINGS_H_
 
-#include "src/tint/lang/spirv/writer/common/options.h"
+#include "lang/spirv/writer/common/options.h"
 
 // Forward declarations
 namespace tint {

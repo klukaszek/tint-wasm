@@ -30,18 +30,18 @@
 
 #include <vector>
 
-#include "src/tint/lang/wgsl/ast/binary_expression.h"
-#include "src/tint/lang/wgsl/ast/call_expression.h"
-#include "src/tint/lang/wgsl/ast/index_accessor_expression.h"
-#include "src/tint/lang/wgsl/ast/literal_expression.h"
-#include "src/tint/lang/wgsl/ast/member_accessor_expression.h"
-#include "src/tint/lang/wgsl/ast/phony_expression.h"
-#include "src/tint/lang/wgsl/ast/templated_identifier.h"
-#include "src/tint/lang/wgsl/ast/unary_op_expression.h"
-#include "src/tint/utils/containers/reverse.h"
-#include "src/tint/utils/containers/vector.h"
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/rtti/switch.h"
+#include "lang/wgsl/ast/binary_expression.h"
+#include "lang/wgsl/ast/call_expression.h"
+#include "lang/wgsl/ast/index_accessor_expression.h"
+#include "lang/wgsl/ast/literal_expression.h"
+#include "lang/wgsl/ast/member_accessor_expression.h"
+#include "lang/wgsl/ast/phony_expression.h"
+#include "lang/wgsl/ast/templated_identifier.h"
+#include "lang/wgsl/ast/unary_op_expression.h"
+#include "utils/containers/reverse.h"
+#include "utils/containers/vector.h"
+#include "utils/macros/compiler.h"
+#include "utils/rtti/switch.h"
 
 namespace tint::ast {
 

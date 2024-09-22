@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_PIPELINE_STAGE_SET_H_
 #define SRC_TINT_LANG_WGSL_SEM_PIPELINE_STAGE_SET_H_
 
-#include "src/tint/lang/wgsl/ast/pipeline_stage.h"
-#include "src/tint/utils/containers/enum_set.h"
+#include "lang/wgsl/ast/pipeline_stage.h"
+#include "utils/containers/enum_set.h"
 
 namespace tint::sem {
 

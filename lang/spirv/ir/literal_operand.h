@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_SPIRV_IR_LITERAL_OPERAND_H_
 #define SRC_TINT_LANG_SPIRV_IR_LITERAL_OPERAND_H_
 
-#include "src/tint/lang/core/ir/constant.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/ir/constant.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::spirv::ir {
 

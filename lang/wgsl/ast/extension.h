@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_EXTENSION_H_
 #define SRC_TINT_LANG_WGSL_AST_EXTENSION_H_
 
-#include "src/tint/lang/wgsl/ast/node.h"
-#include "src/tint/lang/wgsl/extension.h"
+#include "lang/wgsl/ast/node.h"
+#include "lang/wgsl/extension.h"
 
 namespace tint::ast {
 

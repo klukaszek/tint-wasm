@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/utils/containers/enum_set.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/containers/enum_set.h"
+#include "utils/result/result.h"
 
 // Forward declarations
 namespace tint::core::ir {

@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_CORE_IR_TERMINATOR_H_
 #define SRC_TINT_LANG_CORE_IR_TERMINATOR_H_
 
-#include "src/tint/lang/core/ir/operand_instruction.h"
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/ir/operand_instruction.h"
+#include "lang/core/ir/value.h"
+#include "utils/rtti/castable.h"
 
 // Forward declarations
 namespace tint::core::ir {

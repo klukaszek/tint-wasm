@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_CORE_IR_BUILTIN_CALL_H_
 #define SRC_TINT_LANG_CORE_IR_BUILTIN_CALL_H_
 
-#include "src/tint/lang/core/intrinsic/table_data.h"
-#include "src/tint/lang/core/ir/call.h"
-#include "src/tint/utils/rtti/castable.h"
+#include "lang/core/intrinsic/table_data.h"
+#include "lang/core/ir/call.h"
+#include "utils/rtti/castable.h"
 
 namespace tint::core::ir {
 

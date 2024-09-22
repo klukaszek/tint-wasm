@@ -31,9 +31,9 @@
 #include <functional>
 #include <string>
 
-#include "src/tint/lang/core/type/clone_context.h"
-#include "src/tint/lang/core/type/unique_node.h"
-#include "src/tint/utils/symbol/symbol_table.h"
+#include "lang/core/type/clone_context.h"
+#include "lang/core/type/unique_node.h"
+#include "utils/symbol/symbol_table.h"
 
 namespace tint::core::type {
 

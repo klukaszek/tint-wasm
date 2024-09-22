@@ -30,9 +30,9 @@
 
 #include <utility>
 
-#include "src/tint/lang/core/ir/instruction.h"
-#include "src/tint/lang/core/ir/instruction_result.h"
-#include "src/tint/utils/ice/ice.h"
+#include "lang/core/ir/instruction.h"
+#include "lang/core/ir/instruction_result.h"
+#include "utils/ice/ice.h"
 
 namespace tint::core::ir {
 

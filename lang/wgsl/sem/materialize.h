@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_MATERIALIZE_H_
 #define SRC_TINT_LANG_WGSL_SEM_MATERIALIZE_H_
 
-#include "src/tint/lang/wgsl/sem/value_expression.h"
+#include "lang/wgsl/sem/value_expression.h"
 
 namespace tint::sem {
 

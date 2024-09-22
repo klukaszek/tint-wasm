@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_ACCESSOR_EXPRESSION_H_
 #define SRC_TINT_LANG_WGSL_AST_ACCESSOR_EXPRESSION_H_
 
-#include "src/tint/lang/wgsl/ast/expression.h"
+#include "lang/wgsl/ast/expression.h"
 
 namespace tint::ast {
 

@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_SEM_VALUE_CONVERSION_H_
 #define SRC_TINT_LANG_WGSL_SEM_VALUE_CONVERSION_H_
 
-#include "src/tint/lang/wgsl/sem/call_target.h"
+#include "lang/wgsl/sem/call_target.h"
 
 namespace tint::sem {
 

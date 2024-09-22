@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TRANSFORM_DISABLE_UNIFORMITY_ANALYSIS_H_
 #define SRC_TINT_LANG_WGSL_AST_TRANSFORM_DISABLE_UNIFORMITY_ANALYSIS_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::ast::transform {
 

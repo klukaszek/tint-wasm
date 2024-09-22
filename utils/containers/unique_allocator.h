@@ -31,8 +31,8 @@
 #include <functional>
 #include <utility>
 
-#include "src/tint/utils/containers/hashmap_base.h"
-#include "src/tint/utils/memory/block_allocator.h"
+#include "utils/containers/hashmap_base.h"
+#include "utils/memory/block_allocator.h"
 
 namespace tint {
 

@@ -30,7 +30,7 @@
 
 #include <stdint.h>
 
-#include "src/tint/utils/bytes/writer.h"
+#include "utils/bytes/writer.h"
 
 namespace tint::bytes {
 

@@ -30,7 +30,7 @@
 
 #include <map>
 
-#include "src/tint/utils/symbol/symbol.h"
+#include "utils/symbol/symbol.h"
 
 namespace tint::program {
 class CloneContext;

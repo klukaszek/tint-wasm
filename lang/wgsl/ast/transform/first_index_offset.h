@@ -28,9 +28,9 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_TRANSFORM_FIRST_INDEX_OFFSET_H_
 #define SRC_TINT_LANG_WGSL_AST_TRANSFORM_FIRST_INDEX_OFFSET_H_
 
-#include "src/tint/lang/wgsl/ast/transform/binding_remapper.h"
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
-#include "src/tint/utils/reflection/reflection.h"
+#include "lang/wgsl/ast/transform/binding_remapper.h"
+#include "lang/wgsl/ast/transform/transform.h"
+#include "utils/reflection/reflection.h"
 
 namespace tint::ast::transform {
 

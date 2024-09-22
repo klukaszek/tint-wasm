@@ -30,9 +30,9 @@
 
 #include <string>
 
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/utils/diagnostic/diagnostic.h"
-#include "src/tint/utils/result/result.h"
+#include "lang/core/ir/module.h"
+#include "utils/diagnostic/diagnostic.h"
+#include "utils/result/result.h"
 
 // Forward Declarations
 namespace tint {

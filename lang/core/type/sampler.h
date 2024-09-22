@@ -30,8 +30,8 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/sampler_kind.h"
-#include "src/tint/lang/core/type/type.h"
+#include "lang/core/type/sampler_kind.h"
+#include "lang/core/type/type.h"
 
 namespace tint::core::type {
 

@@ -30,58 +30,58 @@
 
 #include <utility>
 
-#include "src/tint/lang/core/constant/scalar.h"  // IWYU pragma: export
-#include "src/tint/lang/core/constant/splat.h"   // IWYU pragma: export
-#include "src/tint/lang/core/ir/access.h"
-#include "src/tint/lang/core/ir/bitcast.h"
-#include "src/tint/lang/core/ir/block_param.h"
-#include "src/tint/lang/core/ir/break_if.h"
-#include "src/tint/lang/core/ir/constant.h"
-#include "src/tint/lang/core/ir/construct.h"
-#include "src/tint/lang/core/ir/continue.h"
-#include "src/tint/lang/core/ir/convert.h"
-#include "src/tint/lang/core/ir/core_binary.h"
-#include "src/tint/lang/core/ir/core_builtin_call.h"
-#include "src/tint/lang/core/ir/core_unary.h"
-#include "src/tint/lang/core/ir/discard.h"
-#include "src/tint/lang/core/ir/exit_if.h"
-#include "src/tint/lang/core/ir/exit_loop.h"
-#include "src/tint/lang/core/ir/exit_switch.h"
-#include "src/tint/lang/core/ir/function.h"
-#include "src/tint/lang/core/ir/function_param.h"
-#include "src/tint/lang/core/ir/if.h"
-#include "src/tint/lang/core/ir/instruction_result.h"
-#include "src/tint/lang/core/ir/let.h"
-#include "src/tint/lang/core/ir/load.h"
-#include "src/tint/lang/core/ir/load_vector_element.h"
-#include "src/tint/lang/core/ir/loop.h"
-#include "src/tint/lang/core/ir/module.h"
-#include "src/tint/lang/core/ir/multi_in_block.h"
-#include "src/tint/lang/core/ir/next_iteration.h"
-#include "src/tint/lang/core/ir/return.h"
-#include "src/tint/lang/core/ir/store.h"
-#include "src/tint/lang/core/ir/store_vector_element.h"
-#include "src/tint/lang/core/ir/switch.h"
-#include "src/tint/lang/core/ir/swizzle.h"
-#include "src/tint/lang/core/ir/terminate_invocation.h"
-#include "src/tint/lang/core/ir/unreachable.h"
-#include "src/tint/lang/core/ir/user_call.h"
-#include "src/tint/lang/core/ir/value.h"
-#include "src/tint/lang/core/ir/var.h"
-#include "src/tint/lang/core/type/array.h"  // IWYU pragma: export
-#include "src/tint/lang/core/type/bool.h"   // IWYU pragma: export
-#include "src/tint/lang/core/type/f16.h"    // IWYU pragma: export
-#include "src/tint/lang/core/type/f32.h"    // IWYU pragma: export
-#include "src/tint/lang/core/type/i32.h"    // IWYU pragma: export
-#include "src/tint/lang/core/type/matrix.h"
-#include "src/tint/lang/core/type/memory_view.h"
-#include "src/tint/lang/core/type/pointer.h"  // IWYU pragma: export
-#include "src/tint/lang/core/type/u32.h"      // IWYU pragma: export
-#include "src/tint/lang/core/type/vector.h"
-#include "src/tint/lang/core/type/void.h"  // IWYU pragma: export
-#include "src/tint/utils/ice/ice.h"
-#include "src/tint/utils/macros/scoped_assignment.h"
-#include "src/tint/utils/rtti/switch.h"
+#include "lang/core/constant/scalar.h"  // IWYU pragma: export
+#include "lang/core/constant/splat.h"   // IWYU pragma: export
+#include "lang/core/ir/access.h"
+#include "lang/core/ir/bitcast.h"
+#include "lang/core/ir/block_param.h"
+#include "lang/core/ir/break_if.h"
+#include "lang/core/ir/constant.h"
+#include "lang/core/ir/construct.h"
+#include "lang/core/ir/continue.h"
+#include "lang/core/ir/convert.h"
+#include "lang/core/ir/core_binary.h"
+#include "lang/core/ir/core_builtin_call.h"
+#include "lang/core/ir/core_unary.h"
+#include "lang/core/ir/discard.h"
+#include "lang/core/ir/exit_if.h"
+#include "lang/core/ir/exit_loop.h"
+#include "lang/core/ir/exit_switch.h"
+#include "lang/core/ir/function.h"
+#include "lang/core/ir/function_param.h"
+#include "lang/core/ir/if.h"
+#include "lang/core/ir/instruction_result.h"
+#include "lang/core/ir/let.h"
+#include "lang/core/ir/load.h"
+#include "lang/core/ir/load_vector_element.h"
+#include "lang/core/ir/loop.h"
+#include "lang/core/ir/module.h"
+#include "lang/core/ir/multi_in_block.h"
+#include "lang/core/ir/next_iteration.h"
+#include "lang/core/ir/return.h"
+#include "lang/core/ir/store.h"
+#include "lang/core/ir/store_vector_element.h"
+#include "lang/core/ir/switch.h"
+#include "lang/core/ir/swizzle.h"
+#include "lang/core/ir/terminate_invocation.h"
+#include "lang/core/ir/unreachable.h"
+#include "lang/core/ir/user_call.h"
+#include "lang/core/ir/value.h"
+#include "lang/core/ir/var.h"
+#include "lang/core/type/array.h"  // IWYU pragma: export
+#include "lang/core/type/bool.h"   // IWYU pragma: export
+#include "lang/core/type/f16.h"    // IWYU pragma: export
+#include "lang/core/type/f32.h"    // IWYU pragma: export
+#include "lang/core/type/i32.h"    // IWYU pragma: export
+#include "lang/core/type/matrix.h"
+#include "lang/core/type/memory_view.h"
+#include "lang/core/type/pointer.h"  // IWYU pragma: export
+#include "lang/core/type/u32.h"      // IWYU pragma: export
+#include "lang/core/type/vector.h"
+#include "lang/core/type/void.h"  // IWYU pragma: export
+#include "utils/ice/ice.h"
+#include "utils/macros/scoped_assignment.h"
+#include "utils/rtti/switch.h"
 
 namespace tint::core::ir {
 

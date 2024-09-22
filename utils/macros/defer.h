@@ -30,7 +30,7 @@
 
 #include <utility>
 
-#include "src/tint/utils/macros/concat.h"
+#include "utils/macros/concat.h"
 
 namespace tint {
 

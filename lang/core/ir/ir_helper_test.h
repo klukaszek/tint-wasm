@@ -29,9 +29,9 @@
 #define SRC_TINT_LANG_CORE_IR_IR_HELPER_TEST_H_
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/core/ir/builder.h"
-#include "src/tint/lang/core/ir/clone_context.h"
-#include "src/tint/lang/core/ir/module.h"
+#include "lang/core/ir/builder.h"
+#include "lang/core/ir/clone_context.h"
+#include "lang/core/ir/module.h"
 
 namespace tint::core::ir {
 

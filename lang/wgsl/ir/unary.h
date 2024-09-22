@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_WGSL_IR_UNARY_H_
 #define SRC_TINT_LANG_WGSL_IR_UNARY_H_
 
-#include "src/tint/lang/core/ir/unary.h"
+#include "lang/core/ir/unary.h"
 
 namespace tint::wgsl::ir {
 

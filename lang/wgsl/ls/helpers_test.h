@@ -36,7 +36,7 @@
 
 #include "langsvr/lsp/lsp.h"
 #include "langsvr/result.h"
-#include "src/tint/lang/wgsl/ls/server.h"
+#include "lang/wgsl/ls/server.h"
 
 namespace tint::wgsl::ls {
 

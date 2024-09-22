@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/wgsl/ast/internal_attribute.h"
+#include "lang/wgsl/ast/internal_attribute.h"
 
 namespace tint::ast {
 

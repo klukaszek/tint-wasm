@@ -34,7 +34,7 @@
 #include <utility>
 #include <vector>
 
-#include "src/tint/utils/macros/compiler.h"
+#include "utils/macros/compiler.h"
 
 TINT_BEGIN_DISABLE_WARNING(NEWLINE_EOF);
 TINT_BEGIN_DISABLE_WARNING(OLD_STYLE_CAST);
@@ -47,12 +47,12 @@ TINT_END_DISABLE_WARNING(OLD_STYLE_CAST);
 TINT_END_DISABLE_WARNING(NEWLINE_EOF);
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/spirv/reader/ast_parser/ast_parser.h"
-#include "src/tint/lang/spirv/reader/ast_parser/fail_stream.h"
-#include "src/tint/lang/spirv/reader/ast_parser/function.h"
-#include "src/tint/lang/spirv/reader/ast_parser/namer.h"
-#include "src/tint/lang/spirv/reader/ast_parser/spirv_tools_helpers_test.h"
-#include "src/tint/lang/spirv/reader/ast_parser/usage.h"
+#include "lang/spirv/reader/ast_parser/ast_parser.h"
+#include "lang/spirv/reader/ast_parser/fail_stream.h"
+#include "lang/spirv/reader/ast_parser/function.h"
+#include "lang/spirv/reader/ast_parser/namer.h"
+#include "lang/spirv/reader/ast_parser/spirv_tools_helpers_test.h"
+#include "lang/spirv/reader/ast_parser/usage.h"
 
 namespace tint::spirv::reader::ast_parser::test {
 

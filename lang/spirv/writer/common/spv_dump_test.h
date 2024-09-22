@@ -31,7 +31,7 @@
 #include <string>
 #include <vector>
 
-#include "src/tint/lang/spirv/writer/common/module.h"
+#include "lang/spirv/writer/common/module.h"
 
 namespace tint::spirv::writer {
 

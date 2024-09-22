@@ -35,15 +35,15 @@
 #include <utility>
 
 #include "gtest/gtest.h"
-#include "src/tint/lang/core/ir/disassembly.h"
-#include "src/tint/lang/core/ir/validator.h"
-#include "src/tint/lang/core/number.h"
-#include "src/tint/lang/wgsl/program/program_builder.h"
-#include "src/tint/lang/wgsl/reader/lower/lower.h"
-#include "src/tint/lang/wgsl/reader/program_to_ir/program_to_ir.h"
-#include "src/tint/lang/wgsl/reader/reader.h"
-#include "src/tint/lang/wgsl/resolver/resolve.h"
-#include "src/tint/utils/text/string_stream.h"
+#include "lang/core/ir/disassembly.h"
+#include "lang/core/ir/validator.h"
+#include "lang/core/number.h"
+#include "lang/wgsl/program/program_builder.h"
+#include "lang/wgsl/reader/lower/lower.h"
+#include "lang/wgsl/reader/program_to_ir/program_to_ir.h"
+#include "lang/wgsl/reader/reader.h"
+#include "lang/wgsl/resolver/resolve.h"
+#include "utils/text/string_stream.h"
 
 namespace tint::wgsl::helpers {
 

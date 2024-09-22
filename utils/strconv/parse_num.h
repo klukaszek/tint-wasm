@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_UTILS_STRCONV_PARSE_NUM_H_
 #define SRC_TINT_UTILS_STRCONV_PARSE_NUM_H_
 
-#include "src/tint/utils/macros/compiler.h"
-#include "src/tint/utils/result/result.h"
+#include "utils/macros/compiler.h"
+#include "utils/result/result.h"
 
 namespace tint::strconv {
 

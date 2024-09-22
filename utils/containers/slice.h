@@ -32,10 +32,10 @@
 #include <cstdint>
 #include <iterator>
 
-#include "src/tint/utils/ice/ice.h"
-#include "src/tint/utils/memory/bitcast.h"
-#include "src/tint/utils/rtti/castable.h"
-#include "src/tint/utils/traits/traits.h"
+#include "utils/ice/ice.h"
+#include "utils/memory/bitcast.h"
+#include "utils/rtti/castable.h"
+#include "utils/traits/traits.h"
 
 namespace tint {
 

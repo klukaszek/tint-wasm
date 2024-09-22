@@ -28,8 +28,8 @@
 #ifndef SRC_TINT_LANG_WGSL_AST_MEMBER_ACCESSOR_EXPRESSION_H_
 #define SRC_TINT_LANG_WGSL_AST_MEMBER_ACCESSOR_EXPRESSION_H_
 
-#include "src/tint/lang/wgsl/ast/accessor_expression.h"
-#include "src/tint/lang/wgsl/ast/identifier_expression.h"
+#include "lang/wgsl/ast/accessor_expression.h"
+#include "lang/wgsl/ast/identifier_expression.h"
 
 namespace tint::ast {
 

@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "src/tint/lang/core/type/memory_view.h"
+#include "lang/core/type/memory_view.h"
 
 namespace tint::core::type {
 

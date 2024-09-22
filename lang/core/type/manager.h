@@ -30,18 +30,18 @@
 
 #include <utility>
 
-#include "src/tint/lang/core/access.h"
-#include "src/tint/lang/core/address_space.h"
-#include "src/tint/lang/core/fluent_types.h"
-#include "src/tint/lang/core/number.h"
-#include "src/tint/lang/core/type/atomic.h"
-#include "src/tint/lang/core/type/sampler.h"
-#include "src/tint/lang/core/type/struct.h"
-#include "src/tint/lang/core/type/type.h"
-#include "src/tint/lang/core/type/unique_node.h"
-#include "src/tint/utils/containers/unique_allocator.h"
-#include "src/tint/utils/math/hash.h"
-#include "src/tint/utils/symbol/symbol.h"
+#include "lang/core/access.h"
+#include "lang/core/address_space.h"
+#include "lang/core/fluent_types.h"
+#include "lang/core/number.h"
+#include "lang/core/type/atomic.h"
+#include "lang/core/type/sampler.h"
+#include "lang/core/type/struct.h"
+#include "lang/core/type/type.h"
+#include "lang/core/type/unique_node.h"
+#include "utils/containers/unique_allocator.h"
+#include "utils/math/hash.h"
+#include "utils/symbol/symbol.h"
 
 // Forward declarations
 namespace tint::core::type {

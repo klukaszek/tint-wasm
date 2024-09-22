@@ -28,7 +28,7 @@
 #ifndef SRC_TINT_LANG_HLSL_WRITER_AST_RAISE_LOCALIZE_STRUCT_ARRAY_ASSIGNMENT_H_
 #define SRC_TINT_LANG_HLSL_WRITER_AST_RAISE_LOCALIZE_STRUCT_ARRAY_ASSIGNMENT_H_
 
-#include "src/tint/lang/wgsl/ast/transform/transform.h"
+#include "lang/wgsl/ast/transform/transform.h"
 
 namespace tint::hlsl::writer {
 
