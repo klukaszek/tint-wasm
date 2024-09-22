@@ -34,6 +34,7 @@ jobs:
         run: |
           source emsdk/emsdk_env.sh
           make
+          mv build/tint.html build/index.html
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && success()
