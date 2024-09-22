@@ -41,13 +41,18 @@
 //
 // ---------------------------------------------------------------
 
+#include "lang/spirv/writer/writer.h"
+#include "spirv-tools/libspirv.h"
+#include "utils/diagnostic/formatter.h"
 #define TINT_BUILD_WGSL_WRITER 1
 #define TINT_BUILD_WGSL_READER 1
 #define TINT_BUILD_SPV_READER 1
 #define TINT_BUILD_SPV_WRITER 1
 
+#include "cmd/common/helper.h"
 #include "spirv-tools/libspirv.hpp"
 #include "tint.h"
+#include "utils/diagnostic/source.h"
 #include <charconv>
 #include <cstdint>
 #include <cstdio>
@@ -79,12 +84,10 @@ static std::string spv_asm_gen;
 static std::vector<uint32_t> spv_bin_gen;
 
 // SPIRV-Tools
-static spvtools::SpirvTools spirv_tools(SPV_ENV_UNIVERSAL_1_6);
+static spvtools::SpirvTools spirv_tools(SPV_ENV_UNIVERSAL_1_3);
 
 // Tint
-static auto tint_spv_reader_options = tint::spirv::reader::Options{
-    .allowed_features = tint::wgsl::AllowedFeatures::Everything(),
-};
+static tint::spirv::reader::Options tint_spv_reader_options;
 static tint::wgsl::writer::Options tint_wgsl_writer_options;
 
 extern "C" {
@@ -96,7 +99,7 @@ const char *SPV_TO_SPVASM(const uint32_t *spirv, size_t size) {
   // This automatically disassembles the SPIRV binary file
   // and stores the generated SPIRV ASM in our static global variable
   if (!spirv_tools.Disassemble(spirv, size, &spv_asm_gen,
-                               SPV_BINARY_TO_TEXT_OPTION_NONE)) {
+                               SPV_BINARY_TO_TEXT_OPTION_INDENT | SPV_BINARY_TO_TEXT_OPTION_FRIENDLY_NAMES)) {
     throw std::runtime_error("Failed to disassemble SPIRV");
   }
 
@@ -112,7 +115,7 @@ const void *SPVASM_TO_SPV(const char *spv_asm, size_t size) {
   // This automatically assembles the SPIRV ASM file
   // and stores the generated SPIRV binary in our static global variable
   if (!spirv_tools.Assemble(spv_asm, size, &spv_bin_gen,
-                            SPV_TEXT_TO_BINARY_OPTION_NONE)) {
+                            SPV_TEXT_TO_BINARY_OPTION_PRESERVE_NUMERIC_IDS)) {
     throw std::runtime_error("Failed to assemble SPIRV ASM");
   }
 
@@ -130,6 +133,11 @@ const char *SPV_TO_WGSL(uint32_t *spirv, size_t size) {
   auto program =
       tint::spirv::reader::Read(spirv_binary, tint_spv_reader_options);
   if (!program.IsValid()) {
+
+    // Figure out what went wrong by checking the diagnostics
+    tint::diag::List diagnostics = program.Diagnostics();
+    printf("Diagnostics: %s\n", diagnostics.Str().c_str());
+
     std::cerr << "Failed to parse SPIRV file" << std::endl;
     return nullptr;
   }
@@ -147,6 +155,103 @@ const char *SPV_TO_WGSL(uint32_t *spirv, size_t size) {
   return wgsl_gen.c_str();
 }
 
+const char *SPVASM_TO_WGSL(const char *spv_asm, size_t size) {
+  // Parse the SPIRV ASM file into an AST
+  std::vector<uint32_t> spirv_binary;
+  if (!spirv_tools.Assemble(spv_asm, size, &spirv_binary,
+                            SPV_TEXT_TO_BINARY_OPTION_PRESERVE_NUMERIC_IDS)) {
+    throw std::runtime_error("Failed to assemble SPIRV ASM");
+  }
+
+  auto program =
+      tint::spirv::reader::Read(spirv_binary, tint_spv_reader_options);
+  if (!program.IsValid()) {
+    // Figure out what went wrong by checking the diagnostics
+    tint::diag::List diagnostics = program.Diagnostics();
+    printf("Diagnostics: %s\n", diagnostics.Str().c_str());
+
+    std::cerr << "Failed to parse SPIRV file" << std::endl;
+    return nullptr;
+  }
+
+  // Generate WGSL from the AST
+  auto result = tint::wgsl::writer::Generate(program, tint_wgsl_writer_options);
+  if (result != tint::Success) {
+    std::cerr << "Failed to generate WGSL" << std::endl;
+    return nullptr;
+  }
+
+  // Store the generated WGSL code in our static global variable
+  wgsl_gen = result->wgsl;
+
+  return wgsl_gen.c_str();
+}
+
+// Takes a WGSL file and converts it to SPIRV binary
+// Returns: Pointer to uint32_t SPIRV bin
+const uint32_t *WGSL_TO_SPV(const char *wgsl, size_t size) {
+
+  tint::Source::File source("input.wgsl", wgsl);
+
+  // Parse the WGSL file into an AST
+  auto program =
+      tint::wgsl::reader::Parse(&source, tint::wgsl::reader::Options{});
+  if (!program.IsValid()) {
+    std::cerr << "Failed to parse WGSL file" << std::endl;
+    return nullptr;
+  }
+
+  // Generate SPIRV from the AST
+  auto result = tint::spirv::writer::Generate(program, {});
+  if (result != tint::Success) {
+    std::cerr << "Failed to generate SPIRV" << std::endl;
+    return nullptr;
+  }
+
+  // Resize the vector to store the generated SPIRV binary
+  spv_bin_gen.resize(result->spirv.size());
+
+  // Store the generated SPIRV binary in our static global variable
+  std::memcpy(spv_bin_gen.data(), result->spirv.data(),
+              result->spirv.size() * sizeof(uint32_t));
+
+  return spv_bin_gen.data();
+}
+
+// Takes a WGSL file and converts it to SPIRV ASM
+// Returns: C String pointer
+const char *WGSL_TO_SPVASM(const char *wgsl, size_t size) {
+
+  tint::Source::File source("input.wgsl", wgsl);
+
+  // Parse the WGSL file into an AST
+  auto program =
+      tint::wgsl::reader::Parse(&source, tint::wgsl::reader::Options{});
+  if (!program.IsValid()) {
+    std::cerr << "Failed to parse WGSL file" << std::endl;
+    return nullptr;
+  }
+
+  // Generate SPIRV from the AST
+  auto result = tint::spirv::writer::Generate(program, {});
+  if (result != tint::Success) {
+    std::cerr << "Failed to generate SPIRV" << std::endl;
+    return nullptr;
+  }
+
+  // Disassemble the generated SPIRV binary
+  if (!spirv_tools.Disassemble(result->spirv.data(), result->spirv.size(),
+                               &spv_asm_gen, SPV_BINARY_TO_TEXT_OPTION_INDENT | SPV_BINARY_TO_TEXT_OPTION_FRIENDLY_NAMES)) {
+    throw std::runtime_error("Failed to disassemble SPIRV");
+  }
+
+  return spv_asm_gen.c_str();
+}
+
+size_t GetSPIRVSize() {
+  printf("SPIRV SIZE: %zu\n", spv_bin_gen.size());
+  return spv_bin_gen.size();
+}
 } // extern "C"
 
 /*// Attempt to re-parse the output program with Tint's WGSL reader.*/

@@ -4,7 +4,9 @@
 EMCC = em++
 CXXFLAGS = -I. -L. -ltint -lm -sMODULARIZE=1 -sEXPORT_ES6=1 -sENVIRONMENT=web -sSTACK_SIZE=262144 
 CXXFLAGS += -sNO_DISABLE_EXCEPTION_CATCHING
-EXPORTED_FUNCS = -sEXPORTED_FUNCTIONS='[ "_SPV_TO_SPVASM", "_SPV_TO_WGSL", "_malloc", "_free"]' -sEXPORTED_RUNTIME_METHODS='["UTF8ToString"]'
+EXPORTED_FUNCS = -sEXPORTED_FUNCTIONS='[ "_SPV_TO_SPVASM", "_SPV_TO_WGSL", "_WGSL_TO_SPV", "_WGSL_TO_SPVASM", "_SPVASM_TO_WGSL", "_GetSPIRVSize", "_SPVASM_TO_SPV", "_malloc", "_free" ]' -sEXPORTED_RUNTIME_METHODS='["UTF8ToString", "stringToUTF8", "lengthBytesUTF8"]'
+
+#  
 
 # Input and output files
 SRC = tint_wasm.cpp
