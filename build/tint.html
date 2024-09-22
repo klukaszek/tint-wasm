@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>Shader Cross-Compilation Demo</title>
+    <style>
+        :root {
+            --bg: #1e1e2e;
+            --fg: #cdd6f4;
+            --accent: #f5c2e7;
+            --subtle: #313244;
+            --mode-bg: #a6e3a1;
+            --mode-fg: #1e1e2e;
+            --line-col-bg: #89b4fa;
+            --line-col-fg: #1e1e2e;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--fg);
+            background-color: var(--bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .container {
+            background-color: var(--subtle);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .file-input {
+            margin-bottom: 10px;
+            color: var(--fg);
+        }
+
+        #fileInfo {
+            font-size: 0.9em;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .compile-options {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .compile-options label {
+            margin-right: 10px;
+            color: var(--fg);
+        }
+
+        select {
+            padding: 5px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            background-color: var(--bg);
+            color: var(--fg);
+        }
+
+        .shader-areas {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .shader-box {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .shader-box h2 {
+            margin-bottom: 10px;
+            color: var(--line-col-bg);
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            resize: vertical;
+            box-sizing: border-box;
+            background-color: var(--subtle);
+            color: var(--fg);
+        }
+
+        #return {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: var(--accent);
+            cursor: pointer;
+            z-index: 1000;
+            background: none;
+            border: none;
+            padding: 5px;
+            line-height: 1;
+        }
+
+        #return:focus {
+            outline: none;
+        }
+
+        #return::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #return:focus::after,
+        #return:hover::after {
+            transform: scaleX(1);
+        }
+
+        @media (max-width: 768px) {
+            .shader-areas {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="return" id="return" tabindex="0" aria-label="Return to previous page">&larr;</button>
+    <h1>WASM + Tint: Shader Cross-Compilation Demo</h1>
+
+    <div class="container">
+        <p>Select a (.spv), (.spvasm), or (.wgsl) shader file from your system:</p>
+        <input type="file" id="fileInput" accept=".spv,.spvasm,.wgsl" class="file-input">
+        <div id="fileInfo"></div>
+
+        <div class="compile-options">
+            <label for="outputType">Compile to Target:</label>
+            <select id="outputType">
+                <option value="0">SPIR-V Binary</option>
+                <option value="1">SPIR-V Assembly</option>
+                <option value="2" selected>WGSL</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="shader-areas">
+        <div class="shader-box">
+            <h2 id="inputLabel">Shader Input: No shader...</h2>
+            <textarea id="inputShader" readonly></textarea>
+        </div>
+        <div class="shader-box">
+            <h2 id="outputLabel">Shader Output: WGSL (.wgsl)</h2>
+            <textarea id="outputShader" readonly></textarea>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        var Module = {
+            preRun: [],
+            postRun: [],
+            print: function (text) {
+                console.log(text);
+            },
+            printErr: function (text) {
+                console.error(text);
+            },
+            setStatus: function (text) {
+                console.log(text);
+            },
+            monitorRunDependencies: function (left) { }
+        };
+
+        window.onerror = function (event) {
+            console.log("onerror: " + event);
+        };
+
+        let fileContent = null;
+
+        let SHADER_TYPE = {
+            SPV: 0,
+            SPVASM: 1,
+            WGSL: 2,
+            UNKNOWN: 3
+        };
+
+        const shader_labels = ['SPIR-V Binary (.spv)', 'SPIR-V Assembly (.spvasm)', 'WGSL (.wgsl)', 'Unknown'];
+
+        // Default input and output shader types
+        var inputShaderType = SHADER_TYPE.UNKNOWN;
+        var outputShaderType = SHADER_TYPE.WGSL;
+
+        document.getElementById('return').addEventListener('click', function () {
+            // Go to www.kylelukaszek.xyz
+            window.location.href = 'https://www.kylelukaszek.xyz';
+        });
+
+        document.getElementById('outputType').addEventListener('change', function (event) {
+            outputShaderType = parseInt(event.target.value);
+            document.querySelector('#outputLabel').textContent = `Shader Output: ${shader_labels[outputShaderType]}`;
+            if (!fileContent) return;
+            else if (inputShaderType === outputShaderType) {
+                document.querySelector('#outputShader').value = 'No conversion needed.';
+                document.getElementById('compile').disabled = true;
+            } else {
+                if (document.getElementById('outputShader').value === 'No conversion needed.') {
+                    document.getElementById('outputShader').value = '';
+                }
+                compileInputShaderToOutputShader(inputShaderType, outputShaderType);
+            }
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                // Wait for the file to be loaded
+                reader.onload = function (e) {
+                    // Check extension for .spv, .spvasm, .wgsl
+                    const extension = file.name.split('.').pop();
+                    switch (extension) {
+                        case 'spv':
+                            inputShaderType = SHADER_TYPE.SPV;
+                            break;
+                        case 'spvasm':
+                            inputShaderType = SHADER_TYPE.SPVASM;
+                            break;
+                        case 'wgsl':
+                            inputShaderType = SHADER_TYPE.WGSL;
+                            break;
+                        default:
+                            alert('Invalid file extension. Please select a .spv, .spvasm, or .wgsl file.');
+                            inputShaderType = SHADER_TYPE.UNKNOWN;
+                            document.querySelector('#inputLabel').textContent = `Shader Input: ${shader_labels[SHADER_TYPE.SPV]}`;
+                            return;
+                    }
+                    // Set the input shader label
+                    document.querySelector('#inputLabel').textContent = `Shader Input: ${shader_labels[SHADER_TYPE.SPV]}`;
+
+                    // Set the file content and display the file info
+                    fileContent = new Uint8Array(e.target.result);
+                    document.getElementById('fileInfo').textContent = `File loaded: ${file.name} (${fileContent.length} bytes)`;
+                    if (inputShaderType === outputShaderType) {
+                        document.querySelector('#outputShader').value = 'No conversion needed.';
+                    } else {
+                        // Compile the input shader to the output shader on file load if the types are different
+                        compileInputShaderToOutputShader(inputShaderType, outputShaderType);
+                    }
+                };
+                reader.readAsArrayBuffer(file);
+            }
+        });
+
+        // Convert the file content to a uint32_t* pointer for the WASM module
+        function fileContentToCPtr(fileContent) {
+            const fileContent32 = new Uint32Array(fileContent.buffer);
+            const c_pointer = Module._malloc(fileContent32.length * fileContent32.BYTES_PER_ELEMENT);
+
+            // Copy the file content to the WASM memory
+            Module.HEAPU32.set(fileContent32, c_pointer >> 2);
+
+            const length = fileContent32.length;
+
+            return {c_pointer, length};
+        }
+
+        // Given the input and output shader types of the current state,
+        // compile the input shader to the output shader using the appropriate functions
+        function compileInputShaderToOutputShader(inputShaderType, outputShaderType) {
+
+            if (!fileContent) {
+                alert('Please select a file first.');
+                return;
+            }
+
+            document.getElementById('inputShader').value = 'Compiling...';
+            document.getElementById('outputShader').value = 'Compiling...';
+
+            document.getElementById('inputShader').value = new TextDecoder().decode(fileContent);
+
+            // Depending on the input and output shader types, we need to call the appropriate functions
+            // for shader conversion. Since SPIRV shaders are not human readable, we need to convert them
+            // to SPIR-V ASM first before converting to anything else.
+            switch (inputShaderType) {
+                case SHADER_TYPE.SPV:
+                    switch (outputShaderType) {
+                        case SHADER_TYPE.SPVASM:
+                            crossCompile(undefined, Module._SPV_TO_SPVASM);
+                            break;
+                        case SHADER_TYPE.WGSL:
+                            // We don't have a readable string for SPIR-V, so we need to convert to SPIR-V ASM first
+                            crossCompile(undefined, Module._SPV_TO_WGSL);
+                            break;
+                    }
+                    break;
+                case SHADER_TYPE.SPVASM:
+                    switch (outputShaderType) {
+                        case SHADER_TYPE.SPV:
+                            crossCompile(undefined, Module._SPVASM_TO_SPV);
+                            break;
+                        case SHADER_TYPE.WGSL:
+                            crossCompile(undefined, Module._SPVASM_TO_WGSL);
+                            break;
+                    }
+                    break;
+                case SHADER_TYPE.WGSL:
+                    switch (outputShaderType) {
+                        case SHADER_TYPE.SPV:
+                            document.getElementById('inputShader').value = fileContent.toString();
+                            document.getElementById('outputShader').value = "SPIR-V is not human readable... Downloading..."
+                            // // Need to implement file download for WGSL to SPIR-V since 
+                            // // copying the text to the clipboard is not useful
+                            // crossCompile(undefined, Module._WGSL_TO_SPV);
+                            break;
+                        case SHADER_TYPE.SPVASM:
+                            crossCompile(undefined, Module._WGSL_TO_SPVASM);
+                            break;
+                    }
+                    break;
+            }
+        }
+
+        // Input function is optional for special cases (if you want legible SPIR-V ASM in place of the SPIR-V Binary garbage)
+        // Output function is always required: it should be Module._SHADERTYPE_TO_SHADERTYPE
+        function crossCompile(inputFunc, outputFunc) {
+
+            const c_data = fileContentToCPtr(fileContent);
+            const c_pointer = c_data.c_pointer;
+            const length = c_data.length;
+
+            // If we do not have to generate a human-readable string for the input shader
+            // We can directly call the output function and return
+            if (inputFunc === undefined) {
+                try {
+                    var res_ptr = outputFunc(c_pointer, length);
+                    var result = Module.UTF8ToString(res_ptr);
+                    document.getElementById('outputShader').value = result;
+                } catch (error) {
+                    document.getElementById('outputShader').value = 'Error: ' + error.message;
+                }
+
+                return;
+            }
+
+            // Generate the input shader string from non-human readable format
+            try {
+                var res_ptr = inputFunc(c_pointer, length);
+                var result = Module.UTF8ToString(res_ptr);
+                document.getElementById('inputShader').value = result;
+            } catch (error) {
+                document.getElementById('inputShader').value = 'Error: ' + error.message;
+            }
+
+            // Generate the output shader string from the input shader string
+            try {
+                var res_ptr = outputFunc(c_pointer, length);
+                var result = Module.UTF8ToString(res_ptr);
+                document.getElementById('outputShader').value = result;
+            } catch (error) {
+                document.getElementById('outputShader').value = 'Error: ' + error.message;
+            }
+
+            // Free the memory for the file content in the HEAPU32
+            Module._free(c_pointer);
+        }
+    </script>
+
+    
+        <script type="module">
+          import initModule from "./tint.js";
+          initModule(Module);
+        </script>
+        
+</body>
+
+</html>
