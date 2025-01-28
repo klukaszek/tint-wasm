@@ -89,7 +89,7 @@ static spvtools::SpirvTools spirv_tools(SPV_ENV_UNIVERSAL_1_3);
 
 // Tint
 static tint::spirv::reader::Options tint_spv_reader_options = {
-    .allowed_features = tint::wgsl::AllowedFeatures::Everything()}
+    .allowed_features = tint::wgsl::AllowedFeatures::Everything()
 };
 static tint::wgsl::writer::Options tint_wgsl_writer_options;
 
