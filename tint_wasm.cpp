@@ -42,6 +42,7 @@
 // ---------------------------------------------------------------
 
 #include "lang/spirv/writer/writer.h"
+#include "lang/wgsl/common/allowed_features.h"
 #include "spirv-tools/libspirv.h"
 #include "utils/diagnostic/formatter.h"
 #define TINT_BUILD_WGSL_WRITER 1
@@ -87,7 +88,9 @@ static std::vector<uint32_t> spv_bin_gen;
 static spvtools::SpirvTools spirv_tools(SPV_ENV_UNIVERSAL_1_3);
 
 // Tint
-static tint::spirv::reader::Options tint_spv_reader_options;
+static tint::spirv::reader::Options tint_spv_reader_options = {
+    .allowed_features = tint::wgsl::AllowedFeatures::Everything()}
+};
 static tint::wgsl::writer::Options tint_wgsl_writer_options;
 
 extern "C" {
@@ -253,6 +256,7 @@ size_t GetSPIRVSize() {
   return spv_bin_gen.size();
 }
 } // extern "C"
+
 
 /*// Attempt to re-parse the output program with Tint's WGSL reader.*/
 /*tint::wgsl::reader::Options parser_options;*/
